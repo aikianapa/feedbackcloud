@@ -1,0 +1,13 @@
+{
+    "name": "Проверка работы websocket и web push notifications",
+    "authors": [
+        {
+            "name": "Maksim Sidorov",
+            "email": "smaksim@gmail.com"
+        }
+    ],
+    "require": {
+        "minishlink/web-push": "^5.2",
+        "workerman/workerman": "^4.0"
+    }
+}

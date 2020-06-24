@@ -1,0 +1,37 @@
+Филиал Приозерский;priozersk@copyprint47.ru
+Филиал Тосненский;tosno@copyprint47.ru
+Филиал Волосовский;volosovo@copyprint47.ru
+Филиал Выборгский;vyborg@copyprint47.ru
+Филиал Тихвинский;tihvin@copyprint47.ru
+Филиал Лодейноепольский;lodeynoepole@copyprint47.ru
+Филиал Кингисеппский;kingisepp@copyprint47.ru
+Филиал Приозерский Сосново;sosnovo@copyprint47.ru
+Филиал Сланцевский;slanci@copyprint47.ru
+Филиал Всеволожский;vsevolozhsk@copyprint47.ru
+Филиал Сосновоборский;sosnoviybor@copyprint47.ru
+Филиал Выборгский Рощино;roshchino@copyprint47.ru
+Филиал Волховский;volhov@copyprint47.ru
+Филиал Ломоносовский;lomonosov@copyprint47.ru
+Филиал Лодейнопольский Подпорожье;podporozhie@copyprint47.ru
+Филиал Выборгский Светогорск;svetogorsk@copyprint47.ru
+Филиал Всеволожский Новосаратовка;novosaratovka@copyprint47.ru
+Филиал Гатчинский;gatchina@copyprint47.ru
+Филиал Лужский;luga@copyprint47.ru
+Филиал Тихвинский Пикалево;pikalevo@copyprint47.ru
+Филиал Тихвинский Бокситогорск;boksitogorsk@copyprint47.ru
+Филиал Киришский;kirishi@copyprint47.ru
+Филиал Кировский;kirovsk@copyprint47.ru
+Филиал Кировский Отрадное;otradnoe@copyprint47.ru
+Филиал Выборгский Приморск;primorsk@copyprint47.ru
+Филиал Всеволожский Сертолово;sertolovo@copyprint47.ru
+Филиал Гатчинский Аэродром;aerodrom@copyprint47.ru
+Филиал Гатчинский Коммунар;kommunar@copyprint47.ru
+Филиал Гатчинский Сиверский;siverskiy@copyprint47.ru
+Филиал Всеволожский Мурино;murino@copyprint47.ru
+Филиал Тосненский Тельмановский;telmanovskiy@copyprint47.ru
+Филиал Всеволожский Кудрово;kudrovo@copyprint47.ru
+Филиал Тосненский Никольское;nikolskoe@copyprint47.ru
+Филиал Всеволожский Колтуши;koltushi@copyprint47.ru
+Филиал Кингисеппский Ивангород;ivangorod@copyprint47.ru
+Бизнес – офис Киришский;kirishi.biz@copyprint47.ru
+Бизнес – офис Выборгский;vyborg.biz@copyprint47.ru

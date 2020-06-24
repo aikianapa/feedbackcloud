@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web socket</title>
+</head>
+<body>
+<script src="push_starter.js"></script>
+<script src="websocket.js"></script>
+<script>
+    let socket = ws("wss://feedbackcloud.ru:9505");
+    let notificationState = "";
+
+    socket.onopen = function (e) {
+        document.querySelector('#state').innerHTML = 'подкючено';
+        console.log('open');
+
+        checkNotificationPermissions().then((permission) => {
+            document.querySelector('#permission').innerHTML = `[permission:] ${permission}`;
+            if (permission === 'granted')
+                subscribe();
+        });
+    };
+
+    socket.onmessage = function (m) {
+        console.log(`got message ${m.data}`);
+        let msg = JSON.parse(m.data);
+        if (msg["state"] !== undefined) {
+            notificationState = msg["state"];
+            if (notificationState == false) {
+                subscribe("online");
+            }
+            document.querySelector('#notify_state').innerHTML = `[notify_state] ${notificationState}`;
+        }
+        if (msg["user"] !== undefined && msg["message"]!==undefined ) {
+            document.querySelector('#messages').innerHTML += `<p>${msg.user}: ${msg.message}</p>`;
+        }
+    };
+
+    socket.onclose = function (event) {
+        if (event.wasClean) {
+            document.querySelector('#state').innerHTML = `[close] Соединение закрыто чисто, код=${event.code} причина=${event.reason}`;
+        } else {
+            // например, сервер убил процесс или сеть недоступна
+            // обычно в этом случае event.code 1006
+            document.querySelector('#state').innerHTML = `[close] Соединение прервано`;
+        }
+    };
+    socket.onerror = function (error) {
+        document.querySelector('#state').innerHTML = `[error] ${error.message}`;
+    };
+
+    function renewNotify(state) {
+        if (notificationState !== "disabled")
+            checkNotificationPermissions().then((permission) => {
+                if (permission === 'granted')
+                    subscribe(state);
+            });
+    }
+
+    window.addEventListener('focus', () => {
+        renewNotify('focus');
+    });
+
+    window.addEventListener('blur', () => {
+        renewNotify('blur');
+    });
+
+    function send() {
+        let msg = document.forms[0].querySelector('input[name="message"]').value;
+        document.forms[0].querySelector('input[name="message"]').value = '';
+
+        let user = document.forms[0].querySelector('input[name="user"]').value;
+
+        socket.send(JSON.stringify({message: msg, user: user}));
+    }
+
+    function subscribe(state) {
+        return subscribeToNotification().then((res) => {
+                if (state !== undefined) {
+                    res = JSON.parse(res);
+                    res["state"] = state;
+                    res = JSON.stringify(res);
+                }
+                console.log(res);
+                socket.send(res);
+                return state;
+            },
+            (err) => console.error(err));
+    }
+
+
+</script>
+<div id="chat">
+    <button onclick="subscribe('online')">Подписаться на новые сообщения</button>
+    <button onclick="subscribe('disabled')">Запретить уведомления на новые сообщения</button>
+
+    <div id="messages">
+    </div>
+    <form>
+        <label for="user">Пользователь:</label><input type="text" id="user" name="user" value="user">
+        <label for="message">Сообщение:</label><input type="text" id="message" name="message">
+    </form>
+    <button onclick="send()">send</button>
+    <p id="state">подключение...</p>
+    <p id="notify_state">состояние подписки на уведомления...</p>
+    <p id="permission">разрешение на показ уведомлений...</p>
+</div>
+</body>
+</html>

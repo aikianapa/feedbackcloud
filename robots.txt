@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /engine/
+Disallow: /database/
+Disallow: /tpl/
+Disallow: /forms/
+Disallow: /modules/
+
+Host: feedbackcloud.ru

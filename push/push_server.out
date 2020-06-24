@@ -1,0 +1,198 @@
+Swoole WebSocket Server is started at http://127.0.0.1:9505
+connection open: 1 of 1
+f610ed99928a5d74c5c1be3aece36a80: ?
+f610ed99928a5d74c5c1be3aece36a80: new client! State: online
+connection open: 2 of 2
+457c7eb2de8a62f664c3bb8ef6b42caf: ?
+457c7eb2de8a62f664c3bb8ef6b42caf: new client! State: online
+457c7eb2de8a62f664c3bb8ef6b42caf: state: disabled
+connection close: 2 of 1
+client 457c7eb2de8a62f664c3bb8ef6b42caf now offline
+connection close: 1 of 0
+client f610ed99928a5d74c5c1be3aece36a80 now offline
+connection open: 3 of 1
+2686a035a4f79318533c43c051df78c1: ?
+2686a035a4f79318533c43c051df78c1: new client! State: online
+2686a035a4f79318533c43c051df78c1: state: blur
+connection close: 3 of 0
+client 2686a035a4f79318533c43c051df78c1 now offline
+connection open: 4 of 1
+457c7eb2de8a62f664c3bb8ef6b42caf: ?
+connection close: 4 of 0
+connection open: 5 of 1
+2686a035a4f79318533c43c051df78c1: ?
+2686a035a4f79318533c43c051df78c1: state: blur
+connection close: 5 of 0
+connection open: 6 of 1
+f610ed99928a5d74c5c1be3aece36a80: ?
+connection close: 6 of 0
+connection open: 7 of 1
+connection open: 8 of 2
+connection close: 8 of 1
+connection open: 9 of 2
+2686a035a4f79318533c43c051df78c1: ?
+connection close: 9 of 1
+connection open: 10 of 2
+2686a035a4f79318533c43c051df78c1: ?
+connection close: 10 of 1
+connection open: 11 of 2
+2686a035a4f79318533c43c051df78c1: ?
+connection close: 11 of 1
+connection open: 12 of 2
+2686a035a4f79318533c43c051df78c1: ?
+2686a035a4f79318533c43c051df78c1: state: online
+received message: {"message":"Test","user":"OLEG"} from 12
+push message: to 12
+push message: to 7
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/foz0uNEscIc:APA91bEysbe4pbM86aVF77ggsBcIsJj_FL-nezCMmhbYMKo0BieW_lCsV9rncQuaBcTpzK0TgvN0KVbJ-nt7wM90uvbLN4JTOtSRrWTPL2DLBUXxZma2VxhfMqPrSYY09OMsJTGHOuD5.received message: {"message":"Test1","user":"OLEG"} from 12
+push message: to 12
+push message: to 7
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/foz0uNEscIc:APA91bEysbe4pbM86aVF77ggsBcIsJj_FL-nezCMmhbYMKo0BieW_lCsV9rncQuaBcTpzK0TgvN0KVbJ-nt7wM90uvbLN4JTOtSRrWTPL2DLBUXxZma2VxhfMqPrSYY09OMsJTGHOuD5.2686a035a4f79318533c43c051df78c1: state: blur
+connection close: 12 of 1
+connection close: 7 of 0
+connection open: 13 of 1
+connection close: 13 of 0
+connection open: 14 of 1
+connection close: 14 of 0
+connection open: 15 of 1
+connection open: 16 of 2
+2686a035a4f79318533c43c051df78c1: ?
+connection close: 16 of 1
+connection open: 17 of 2
+2686a035a4f79318533c43c051df78c1: ?
+received message: {"message":"Так есть нотификация или нет? ","user":"user"} from 17
+push message: to 15
+push message: to 17
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/foz0uNEscIc:APA91bEysbe4pbM86aVF77ggsBcIsJj_FL-nezCMmhbYMKo0BieW_lCsV9rncQuaBcTpzK0TgvN0KVbJ-nt7wM90uvbLN4JTOtSRrWTPL2DLBUXxZma2VxhfMqPrSYY09OMsJTGHOuD5.[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.2686a035a4f79318533c43c051df78c1: state: blur
+connection close: 17 of 1
+connection close: 15 of 0
+connection open: 18 of 1
+connection close: 18 of 0
+connection open: 19 of 1
+2686a035a4f79318533c43c051df78c1: ?
+2686a035a4f79318533c43c051df78c1: state: blur
+connection close: 19 of 0
+connection open: 20 of 1
+f610ed99928a5d74c5c1be3aece36a80: ?
+connection open: 21 of 2
+2686a035a4f79318533c43c051df78c1: ?
+connection close: 21 of 1
+connection close: 20 of 0
+connection open: 22 of 1
+f610ed99928a5d74c5c1be3aece36a80: ?
+connection open: 23 of 2
+connection close: 23 of 1
+connection open: 24 of 2
+received message: {"message":"","user":"user"} from 24
+push message: to 22
+push message: to 24
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/foz0uNEscIc:APA91bEysbe4pbM86aVF77ggsBcIsJj_FL-nezCMmhbYMKo0BieW_lCsV9rncQuaBcTpzK0TgvN0KVbJ-nt7wM90uvbLN4JTOtSRrWTPL2DLBUXxZma2VxhfMqPrSYY09OMsJTGHOuD5.[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.received message: {"message":"Привет","user":"user"} from 24
+push message: to 22
+push message: to 24
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/foz0uNEscIc:APA91bEysbe4pbM86aVF77ggsBcIsJj_FL-nezCMmhbYMKo0BieW_lCsV9rncQuaBcTpzK0TgvN0KVbJ-nt7wM90uvbLN4JTOtSRrWTPL2DLBUXxZma2VxhfMqPrSYY09OMsJTGHOuD5.[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.f610ed99928a5d74c5c1be3aece36a80: state: focus
+f610ed99928a5d74c5c1be3aece36a80: state: focus
+received message: {"message":"Привет","user":"Oleg"} from 22
+push message: to 22
+push message: to 24
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.received message: {"message":"Закрой браузер ","user":"Oleg"} from 22
+push message: to 22
+push message: to 24
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.f610ed99928a5d74c5c1be3aece36a80: state: blur
+connection close: 24 of 1
+connection open: 25 of 2
+connection close: 25 of 1
+f610ed99928a5d74c5c1be3aece36a80: state: focus
+received message: {"message":"Есть сообщение?","user":"Oleg"} from 22
+push message: to 22
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.connection open: 26 of 2
+f610ed99928a5d74c5c1be3aece36a80: state: blur
+received message: {"message":"Куку","user":"user"} from 26
+push message: to 22
+push message: to 26
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/foz0uNEscIc:APA91bEysbe4pbM86aVF77ggsBcIsJj_FL-nezCMmhbYMKo0BieW_lCsV9rncQuaBcTpzK0TgvN0KVbJ-nt7wM90uvbLN4JTOtSRrWTPL2DLBUXxZma2VxhfMqPrSYY09OMsJTGHOuD5.[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.f610ed99928a5d74c5c1be3aece36a80: state: focus
+received message: {"message":"Куку","user":"Oleg"} from 22
+push message: to 22
+push message: to 26
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.received message: {"message":"Так что? была нотификация?","user":"Oleg"} from 22
+push message: to 22
+push message: to 26
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.f610ed99928a5d74c5c1be3aece36a80: state: blur
+received message: {"message":"А что это.","user":"user"} from 26
+push message: to 22
+push message: to 26
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/foz0uNEscIc:APA91bEysbe4pbM86aVF77ggsBcIsJj_FL-nezCMmhbYMKo0BieW_lCsV9rncQuaBcTpzK0TgvN0KVbJ-nt7wM90uvbLN4JTOtSRrWTPL2DLBUXxZma2VxhfMqPrSYY09OMsJTGHOuD5.[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.f610ed99928a5d74c5c1be3aece36a80: state: focus
+received message: {"message":"уведомление, что сообщение пришло","user":"Oleg"} from 22
+push message: to 22
+push message: to 26
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.received message: {"message":"системное уведомление","user":"Oleg"} from 22
+push message: to 22
+push message: to 26
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.received message: {"message":"Нет, погоди выйду а ты мне напиши","user":"user"} from 26
+push message: to 22
+push message: to 26
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.connection close: 26 of 1
+f610ed99928a5d74c5c1be3aece36a80: state: blur
+f610ed99928a5d74c5c1be3aece36a80: state: focus
+received message: {"message":"Пишу ещё раз","user":"Oleg"} from 22
+push message: to 22
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.f610ed99928a5d74c5c1be3aece36a80: state: blur
+connection open: 27 of 2
+f610ed99928a5d74c5c1be3aece36a80: state: focus
+received message: {"message":"Давай ещё ","user":"user"} from 27
+push message: to 22
+push message: to 27
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.received message: {"message":"Ну что, не куку?","user":"Oleg"} from 22
+push message: to 22
+push message: to 27
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.f610ed99928a5d74c5c1be3aece36a80: state: blur
+received message: {"message":"Нет не ку-ку ","user":"user"} from 27
+push message: to 22
+push message: to 27
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/foz0uNEscIc:APA91bEysbe4pbM86aVF77ggsBcIsJj_FL-nezCMmhbYMKo0BieW_lCsV9rncQuaBcTpzK0TgvN0KVbJ-nt7wM90uvbLN4JTOtSRrWTPL2DLBUXxZma2VxhfMqPrSYY09OMsJTGHOuD5.[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.f610ed99928a5d74c5c1be3aece36a80: state: focus
+received message: {"message":"Или я что то делаю не правильно ","user":"user"} from 27
+push message: to 22
+push message: to 27
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.received message: {"message":"Ну, значит Максим ещё пусть поглобалит, но вроде как Apple не поддерживает эту фичу в браузерах. Только в приложениях.","user":"Oleg"} from 22
+push message: to 22
+push message: to 27
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.received message: {"message":"Хорошо","user":"user"} from 27
+push message: to 22
+push message: to 27
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.received message: {"message":"Напиши мне что нить ","user":"user"} from 27
+push message: to 22
+push message: to 27
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.received message: {"message":"Пишу","user":"Oleg"} from 22
+push message: to 22
+push message: to 27
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.received message: {"message":"Вообще это тестовый чат, для проверки нотификаций","user":"Oleg"} from 22
+push message: to 22
+push message: to 27
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.f610ed99928a5d74c5c1be3aece36a80: state: blur
+received message: {"message":"Ну ок)","user":"user"} from 27
+push message: to 22
+push message: to 27
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/foz0uNEscIc:APA91bEysbe4pbM86aVF77ggsBcIsJj_FL-nezCMmhbYMKo0BieW_lCsV9rncQuaBcTpzK0TgvN0KVbJ-nt7wM90uvbLN4JTOtSRrWTPL2DLBUXxZma2VxhfMqPrSYY09OMsJTGHOuD5.[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.f610ed99928a5d74c5c1be3aece36a80: state: focus
+f610ed99928a5d74c5c1be3aece36a80: state: blur
+connection close: 27 of 1
+f610ed99928a5d74c5c1be3aece36a80: state: focus
+f610ed99928a5d74c5c1be3aece36a80: state: blur
+f610ed99928a5d74c5c1be3aece36a80: state: focus
+f610ed99928a5d74c5c1be3aece36a80: state: blur
+f610ed99928a5d74c5c1be3aece36a80: state: focus
+f610ed99928a5d74c5c1be3aece36a80: state: blur
+connection open: 28 of 2
+f610ed99928a5d74c5c1be3aece36a80: state: focus
+f610ed99928a5d74c5c1be3aece36a80: state: blur
+f610ed99928a5d74c5c1be3aece36a80: state: focus
+f610ed99928a5d74c5c1be3aece36a80: state: blur
+f610ed99928a5d74c5c1be3aece36a80: state: focus
+connection close: 22 of 1
+connection close: 28 of 0
+[2020-03-25 00:29:28 *238588.0]	WARNING	swSSL_accept: bad SSL client[unknown:0], reason=267, error_string=error:0000010B:lib(0):func(0):reason(267)
+[2020-03-25 15:08:58 *238588.0]	WARNING	swSSL_accept: bad SSL client[unknown:0], reason=267, error_string=error:0000010B:lib(0):func(0):reason(267)
+connection open: 31 of 1
+received message: {"message":"wqer","user":"user"} from 31
+push message: to 31
+[v] Message sent successfully for subscription https://fcm.googleapis.com/fcm/send/fbDPae6Slls:APA91bEAFd5Ba8qIr0BSgUyB9YFqlyHwt4f4aZPvFNIqwb77pNAQPPJzCeUJ-RYkloc5r-cjLCLFAuikeyHpNsxcP3f3swmSJFlaHSDW8z9DDcyibBM6r5ZBY4opKcvq11l2Bkm6_d5g.connection close: 31 of 0
+connection open: 32 of 1
+connection close: 32 of 0
