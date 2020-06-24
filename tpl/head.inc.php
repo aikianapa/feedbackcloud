@@ -1,9 +1,4 @@
 <head>
-
-  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-  <script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script>
-  <script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script>
-
     <wb-var base="/tpl" />
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,8 +12,7 @@
     <wb-snippet name="wbapp" />
     <wb-snippet name="bootstrap" />
     <wb-snippet name="fontawesome4" />
-    <script type="text/javascript" async="" src="assets/js/custom.js"></script>
-	<meta name="yandex-verification" content="c615865fbb00bfed" />
+	  <meta name="yandex-verification" content="c615865fbb00bfed" />
 
     <!-- Twitter -->
     <meta name="twitter:site" content="https://feedbackcloud.ru/">
