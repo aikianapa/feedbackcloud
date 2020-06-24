@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web socket</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+<script src="websocket.js"></script>
+<script>
+    let socket = ws("wss://feedbackcloud.ru:9502");
+
+    socket.onopen = function (e) {
+        $('#state').text('подкючено');
+        console.log('open');
+    };
+    socket.onmessage = function (m) {
+        console.log(`got message ${m.data}`);
+        $("#messages").append(`<p>${m.data}</p>`);
+    };
+    socket.onclose = function (event) {
+        if (event.wasClean) {
+            $('#state').text(`[close] Соединение закрыто чисто, код=${event.code} причина=${event.reason}`);
+        } else {
+            // например, сервер убил процесс или сеть недоступна
+            // обычно в этом случае event.code 1006
+            $('#state').text(`[close] Соединение прервано`);
+        }
+    };
+    socket.onerror = function (error) {
+        $('#state').text(`[error] ${error.message}`);
+    };
+
+    function send() {
+        socket.send($('#message')[0].value);
+        $('#message')[0].value = '';
+    }
+
+</script>
+<div id="chat">
+    <div id="messages">
+
+    </div>
+    <input type="text" id="message">
+    <button onclick="send()">send</button>
+    <p id="state">подключение...</p>
+</div>
+</body>
+</html>

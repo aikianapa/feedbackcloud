@@ -1,12 +1,8 @@
-<html>
-<wb-include wb-tpl="head.inc.php" wb-if="'{{_route.module}}' == 'login'"/>
-<wb-include wb-tpl="body.inc.php" wb-if="'{{_route.module}}' == 'login'"/>
+<meta data-wb="role=include&template=wrapper.inc.php" data-wb-where='"{{_route.controller}}" = "module" AND "{{_route.mode}}" = "login"'>
 
-<wb-jq wb="$dom->find('.screen_height')->appendTo('main > .container')" wb-if="'{{_route.module}}' == 'login'" />
-
-<section class="screen_height d-flex justify-content-center align-items-center">
+<section class="screen_height d-flex justify-content-center align-items-center signin-component-height" prepend="main > .container">
     <div class="row">
-        <div class="co-12">
+        <div class="co-12 px-2">
             <div class="form-container">
               <ul class="nav nav-tabs d-none" role="tablist">
                   <li class="nav-item">
@@ -21,20 +17,24 @@
               </ul>
               <div class="tab-content" >
                   <div class="tab-pane fade show active pb-1" id="signin" role="tabpanel">
-                      <wb-include wb-tpl="login_signin.php" />
+                    <wb-include wb="tpl=login_signin.php" />
                   </div>
 
 
                   <div class="tab-pane fade pb-1" id="signup" role="tabpanel">
-                      <wb-include wb-tpl="login_signup.php" />
+                    <wb-include wb="tpl=login_signup.php" />
                   </div>
 
                   <div class="tab-pane fade pb-1" id="recovery" role="tabpanel">
-                      <wb-include wb-tpl="login_recover.php" />
+                    <wb-include wb="tpl=login_recovery.php" />
                   </div>
               </div>
             </div>
+
+            <div>
+                <img class="down-arrow-img" src="assets/img/down-arrow-icon.png">
+            </div>
+
         </div>
     </div>
 </section>
-</html>

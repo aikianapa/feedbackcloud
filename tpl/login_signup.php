@@ -1,45 +1,13 @@
 <div class="register">
   <form method="post" action="/signup">
-    <div class="register-title text-uppercase text-center mt-3">
+    <div class="register-title text-uppercase text-center mt-3 text-white">
       регистрация
     </div>
-    <div class="mb-3 mt-3 input-border">
-      <input type="mask" class="form-control" placeholder="Телефон" aria-label="phone"
-        aria-describedby="phone" name="phone" data-mask="+7 (999) 999-99-99" required>
+    <div class="text-center mt-3">
+      <p class="text-white">
+        Регистрация новых клиентов временно недоступна.<br/>Пожалуйста, зайдите позже.
+      </p>
     </div>
-    <div class="mb-2 mt-3 input-border">
-      <input type="text" class="form-control" placeholder="Придумайте пароль" minlength="6" aria-label="password"
-        aria-describedby="password" name="password">
-    </div>
-    <div class="mb-3 mt-3 input-border">
-      <input type="text" class="form-control" placeholder="Подтвердите пароль" aria-label="password-confirm"
-        aria-describedby="password-confirm">
-    </div>
-    <small>
-      6+ символов, не менее одной цифры,
-      <br> одной буквы, только латинские буквы
-    </small>
-    <div class="smscode">
-    <div class="mb-3 mt-3 input-border">
-      <input type="number" class="form-control" name="smscode" placeholder="Введите код из СМС" aria-label="promo"
-        aria-describedby="promo" required disabled onkeyup="$(this).checkCode(4);">
-    </div>
-    <button type="button" class="button btn_white" onclick="$(this).getCode();">
-      Получить СМС с кодом
-    </button>
-    </div>
-    <div class="licence hint mt-5">
-      Регистрируясь в сервисе, Вы
-      <br> подтверждаете своё согласие с условия
-      <br> предоставления
-      <a href="/policy">сервиса</a>
-    </div>
-    <div class="mt-5">
-      <button type="submit" value="signup" name="signup" class="button btn_white" onclick='return $(this).parents("form").checkRequired();'  action="/signup">
-        Зарегистрироваться
-      </button>
-    </div>
-    <div>
       <a href="#" onclick="$('#signin-tab').trigger('click');return false;" class="button btn_transparent">
         Авторизация
       </a>

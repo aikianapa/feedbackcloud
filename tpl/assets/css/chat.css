@@ -1,0 +1,370 @@
+body.chat {
+    height:100vh;
+    overflow: hidden;
+    padding:0;
+    margin:0;
+}
+.chat-header{
+    background: transparent !important;
+    border-bottom: none !important;
+}
+.chat-container{
+    border: none !important;
+}
+.message_box{
+    color: #30A3E6;
+}
+
+.user-message .message{
+    border: 1px solid #30A3E6;
+    color: #30A3E6;
+    background: #FFF;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    height: max-content;
+    font-weight: 500;
+}
+.manager-name{
+    color: #30A3E6;
+}
+.message img{
+    width: 100%;
+    height: 100%;
+    min-height: 60px;
+    min-width: 60px;
+}
+
+@media all and (orientation:portrait) {
+    .message-avatar img {
+        width:7vh;
+        height:auto;
+    }
+}
+@media all and (orientation:landscape) {
+    .message-avatar img {
+        width:7vw;
+        height:auto;
+    }
+}
+@media screen and (max-width: 640px) {
+    .chat-textarea-container .chat-textarea-btn:first-child{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 992px) {
+    .user-message{
+        padding-left: 10px !important;
+    }
+    .message img{
+        height: unset !important;
+    }
+}
+.message-container{
+    padding-left: 10px;
+    max-width: 100%;
+}
+.user .message-container{
+    padding-right: 0;
+    order: -1;
+}
+.user.user-message .row, .user.user-message .row .d-flex, .user.user-message{
+    padding-right: 0 !important;
+}
+.card-header img{
+    height: 80px;
+}
+.chat-textarea-container{
+    margin-top: 20px;
+}
+.chat-textarea-container img{
+    height: 50px;
+}
+.chat-textarea-container .form-group, .chat-textarea-container form{
+    margin-bottom: 0;
+}
+.chat-textarea-container .chat-textarea-btn{
+    background: transparent;
+    border: none;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+.chat-textarea-container .chat-textarea-btn:focus{
+    outline: 0;
+}
+.user.user-message .message{
+    border: 1px solid #30A3E6;
+    color: #FFF;
+    background: #30A3E6;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+    height: max-content;
+}
+.user.user-message, .user.user-message .row, .user.user-message .col-lg-6{
+    justify-content: flex-end;
+}
+.user.user-message .message-date-container{
+    text-align: right;
+    padding-left: 0;
+}
+.user-message .message-date-container, .manager-name{
+    padding-left: 10px;
+}
+.message-date-container span{
+    position: relative;
+}
+.user-message .message-date-container.read span:before, .user-message .message-date-container.unread span:before{
+    right: -25px;
+}
+.user.user-message .message-date-container.read span:before, .user.user-message .message-date-container.unread span:before{
+    left: -25px;
+}
+.message-date-container.read span:before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 13px;
+    top: 7px;
+    background: url("/tpl/assets/img/message-read.svg") no-repeat;
+}
+.message-date-container.unread span:before{
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 13px;
+    top: 7px;
+    background: url("/tpl/assets/img/message-unread.svg") no-repeat;
+}
+.chat-history-scroll a, .chat-history-scroll a:hover, .chat-history-scroll a:focus{
+    color: #30A3E6 !important;
+    text-decoration: none !important;
+}
+.user.user-message .row{
+    margin: 0;
+}
+.user.user-message .message{
+    margin-top: 0;
+}
+.user.user-message .avatar-container{
+    display: none !important;
+}
+.user-name p, .manager-name p{
+    padding-bottom: 5px;
+}
+.chat-container .button{
+    min-width: 0 !important;
+    padding: 8px 15px !important;
+    text-transform: none !important;
+    max-width: 100%;
+    background: #30A3E6 !important;
+    border-color: #30A3E6 !important;
+}
+.chat-container .button:hover, .chat-container .button:focus{
+    background: #FFF !important;
+    color: #30A3E6;
+    outline: 0;
+}
+textarea{
+    background: #30A3E6 !important;
+    color: #FFF !important;
+    border-radius: 8px !important;
+    padding: 15px 25px 0 !important;
+    font-size: 1rem !important;
+    line-height: 1.1rem !important;
+    border: none !important;
+}
+textarea::placeholder{
+    color: #FFF !important;
+}
+.chat-textarea-container form{
+    position: relative;
+}
+.chat-send{
+    background: transparent;
+    border: none;
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    top: 5px;
+    right: 10px;
+}
+.chat-send img{
+    width: 20px;
+    height: 20px;
+}
+.navbar-bg{
+    background: #30A3E6;
+    width: 100%;
+}
+.navbar-white-bg{
+    background: #FFF;
+    width: 100%;
+}
+.nav-button-white{
+    background: #30A3E6;
+    border: 1px solid #fff;
+    color: #FFF !important;
+    border-radius: 8px;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    text-decoration: none;
+    transition: all 0.33s;
+}
+.dropdown-item.active, .dropdown-item:active{
+    background-color: #30A3E6 !important;
+    color: #FFF !important;
+}
+.nav-button-white:hover, .nav-button-white:focus{
+    background: #FFF;
+    border: 1px solid #30A3E6;
+    transition: all 0.33s;
+    color: #33b4ff !important;
+}
+.dropdown-menu{
+    width: 100%;
+}
+.navbar img{
+    width: 50px;
+}
+.navbar a{
+    color: #FFF;
+}
+.card-body {
+    overflow-y: scroll;
+    height: calc(100vh - 200px);
+}
+.message_box, .chat-textarea-container{
+    margin-right: 8px;
+}
+.nav-white-container{
+    margin-right: 12px !important;
+}
+.chat-textarea-container, .nav-avatar-container{
+    margin-right: 11px !important;
+}
+.navbar-brand img{
+    margin-left: 7px;
+}
+.navbar-nav .dropdown-menu{
+    top: 72px;
+    border: 2px solid #30A3E6;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.manager-avatar img{
+    /*display: block;*/
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.nav-username-container{
+    padding-left: 25px;
+    position: relative;
+}
+.nav-username-container:before{
+    content: '';
+    padding-left: 25px;
+    background: url("/tpl/assets/img/nav-arrow-right-white.svg") no-repeat;
+    background-position: center center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    transition: all 0.33s;
+}
+.nav-item.dropdown.show .nav-username-container:before{
+    transform: rotate(90deg);
+    transition: all 0.33s;
+}
+.chatlist-button-container .dropdown-item{
+    text-align: left !important;
+}
+.dropdown-item{
+    color: #30A3E6 !important;
+    text-align: center !important;
+    white-space: normal !important;
+}
+.navbar-toggler{
+    padding-right: 0;
+}
+.animated-icon{
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.animated-icon span:nth-child(1) {
+    top: 0;
+}
+.animated-icon span:nth-child(2) {
+    top: 10px;
+}
+.animated-icon span:nth-child(3) {
+    top: 20px;
+}
+.animated-icon span{
+    background: #FFF;
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+nav .dropdown-toggle::after{
+    display: none;
+}
+.nav-white-container{
+    color: #30A3E6;
+}
+.nav-white-company-info-container{
+    width: max-content;
+    max-width: max-content !important;
+}
+.nav-white-close-icon{
+    width: 14px;
+    height: 14px;
+}
+.nav-white-close-icon-approve{
+    width: 20px;
+    height: 20px;
+}
+.nav-white-close-container.confirm{
+    border: 1px solid #30A3E6;
+    border-radius: 8px;
+}
+.nav-white-close-container.confirm .nav-white-close-link-block, .nav-white-close-container .nav-white-close-link-block-confirm{
+    display: none;
+}
+.nav-white-close-container.confirm .nav-white-close-link-block-confirm{
+    display: flex;
+    align-items: center;
+}
+.nav-white-close-container.confirm .nav-white-close-link-block-confirm span{
+    padding-right: 65px;
+}
+.company-info-icon{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}

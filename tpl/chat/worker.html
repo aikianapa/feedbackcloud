@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web socket</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+<script>
+    let worker;
+    //    Notification.requestPermission();
+    navigator.serviceWorker.register('chat_worker.js').then(reg => {
+        console.log('Chat service worker registered!');
+        navigator.serviceWorker.ready.then(ready => {
+            console.log('Chat service worker ready!');
+            worker = ready.active;
+            worker.postMessage({message: 'connection'});
+        })
+    });
+
+    const channel = new BroadcastChannel('sw-messages');
+    channel.addEventListener('message', msg => {
+        console.log(`got message ${msg.data.message}`);
+        switch (msg.data.message) {
+            case 'onopen':
+                $('#state').text('подкючено');
+                console.log('open');
+                break;
+            case 'onmessage':
+                console.log(`got message ${msg.data.data}`);
+                $("#messages").append(`<p>${msg.data.data}</p>`);
+                break;
+            case 'onclose':
+                if (msg.data.wasClean) {
+                    $('#state').text(`[close] Соединение закрыто чисто, код=${msg.data.code} причина=${msg.data.reason}`);
+                } else {
+                    // например, сервер убил процесс или сеть недоступна
+                    // обычно в этом случае event.code 1006
+                    $('#state').text(`[close] Соединение прервано`);
+                }
+                break;
+            case 'onerror':
+                $('#state').text(`[error] ${msg.data.message}`);
+                break;
+        }
+    });
+
+    function send() {
+        worker.postMessage({message: 'send', data: $('#message')[0].value});
+        $('#message')[0].value = '';
+    }
+</script>
+<div id="chat">
+    <div id="messages">
+
+    </div>
+    <input type="text" id="message">
+    <button onclick="send()">send</button>
+    <p id="state">подключение...</p>
+</div>
+</body>
+</html>

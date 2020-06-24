@@ -1,5 +1,4 @@
-var socket;
-
+"use strict"
 $(document).ready(function() {
     $('body').on('click', '.scroll-button-top', function (e){
         e.preventDefault();
@@ -7,13 +6,27 @@ $(document).ready(function() {
             scrollTop: 0
         },1000);
     });
+    
+    
+    $(".btnLogin").click(function(){
+		localStorage.setItem("login",null);
+		localStorage.setItem("password",null);
+		
+		var form = $(this).parents("form");
+		var login = $(form).find("[name=l]").val();
+		var password = $(form).find("[name=p]").val();
+		login = login.replace(/[^0-9]/g, '');
+		
+		$.post("https://api.feedbackcloud.ru/auth/phone/",{"login":login,"password":password},function(data){
+			if (data.error !== true && data.active == "on")  {
+				localStorage.setItem("login",login);
+				localStorage.setItem("password",password);
+				document.location.href = "/app#cabinet";
+			} else {
+				$(form)[0].reset();
+			}
+		})
+		
+
+	});
 });
-
-wbapp.loadScripts([
-  "/tpl/assets/js/websocket.js",
-  "/tpl/assets/js/socket_api.js"
-],"socket-api");
-
-$(document).on("socket-api",function(){
-    socket = new socketApi("wss://api.feedbackcloud.ru:4443");
-})

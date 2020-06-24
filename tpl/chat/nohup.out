@@ -1,0 +1,704 @@
+Swoole WebSocket Server is started at https://127.0.0.1:9502
+connection open: 1 of 1
+received message: qwerqwr from 1
+push message: to 1
+received message: qwerqwer from 1
+push message: to 1
+received message: sdfgsdfgsdfg from 1
+push message: to 1
+connection close: 1 of 0
+connection open: 2 of 1
+received message: kgjkgkjh from 2
+push message: to 2
+connection close: 2 of 0
+connection open: 3 of 1
+received message: укйцук from 3
+push message: to 3
+received message:  from 3
+push message: to 3
+received message: йукйцук from 3
+push message: to 3
+connection close: 3 of 0
+connection open: 4 of 1
+connection close: 4 of 0
+connection open: 5 of 1
+connection close: 5 of 0
+connection open: 6 of 1
+connection close: 6 of 0
+connection open: 7 of 1
+connection close: 7 of 0
+connection open: 8 of 1
+connection open: 9 of 2
+connection close: 9 of 1
+connection open: 10 of 2
+connection close: 10 of 1
+connection open: 11 of 2
+received message: zxcv from 11
+push message: to 11
+push message: to 8
+connection close: 11 of 1
+connection open: 12 of 2
+connection close: 12 of 1
+connection open: 13 of 2
+connection close: 13 of 1
+connection open: 14 of 2
+connection close: 14 of 1
+connection open: 15 of 2
+connection close: 15 of 1
+connection open: 16 of 2
+connection open: 17 of 3
+connection open: 18 of 4
+connection close: 18 of 3
+connection open: 19 of 4
+connection open: 20 of 5
+connection close: 20 of 4
+connection open: 21 of 5
+connection open: 22 of 6
+connection close: 22 of 5
+connection open: 23 of 6
+connection close: 23 of 5
+connection open: 24 of 6
+connection open: 25 of 7
+connection open: 26 of 8
+[2020-03-12 17:43:27 *6132.0]	WARNING	swSSL_accept: bad SSL client[unknown:0], reason=156, error_string=error:0000009C:lib(0):func(0):reason(156)
+[2020-03-12 17:43:30 *6132.0]	WARNING	swSSL_accept: bad SSL client[unknown:0], reason=156, error_string=error:0000009C:lib(0):func(0):reason(156)
+connection close: 24 of 7
+connection close: 26 of 6
+connection open: 29 of 7
+connection close: 29 of 6
+connection open: 30 of 7
+connection close: 30 of 6
+connection open: 31 of 7
+connection close: 31 of 6
+connection open: 32 of 7
+connection close: 32 of 6
+connection open: 33 of 7
+connection close: 33 of 6
+connection open: 34 of 7
+connection close: 34 of 6
+connection open: 35 of 7
+connection close: 35 of 6
+connection open: 36 of 7
+connection close: 36 of 6
+connection open: 37 of 7
+connection close: 37 of 6
+connection open: 38 of 7
+connection close: 38 of 6
+connection open: 39 of 7
+connection close: 39 of 6
+connection open: 40 of 7
+connection close: 40 of 6
+connection open: 41 of 7
+connection close: 41 of 6
+connection open: 42 of 7
+connection open: 43 of 8
+connection close: 43 of 7
+connection close: 42 of 6
+connection open: 44 of 7
+connection open: 45 of 8
+connection open: 46 of 9
+connection close: 45 of 8
+connection close: 44 of 7
+connection open: 47 of 8
+connection open: 48 of 9
+connection close: 48 of 8
+connection close: 47 of 7
+connection open: 49 of 8
+connection open: 50 of 9
+connection close: 50 of 8
+connection open: 51 of 9
+connection close: 51 of 8
+connection open: 52 of 9
+connection close: 52 of 8
+connection open: 53 of 9
+connection close: 53 of 8
+connection open: 54 of 9
+connection close: 54 of 8
+connection open: 55 of 9
+connection close: 55 of 8
+connection open: 56 of 9
+connection close: 56 of 8
+connection open: 57 of 9
+connection close: 57 of 8
+connection open: 58 of 9
+connection close: 58 of 8
+connection open: 59 of 9
+connection close: 59 of 8
+connection open: 60 of 9
+received message: [object MessageEvent] from 60
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 60
+push message: to 8
+connection close: 60 of 8
+connection open: 61 of 9
+received message: zvzxvc from 61
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 61
+push message: to 8
+received message: sdg from 61
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 61
+push message: to 8
+connection close: 61 of 8
+connection open: 62 of 9
+received message: sdfg from 62
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 62
+push message: to 8
+received message: asdf from 62
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 62
+push message: to 8
+connection close: 62 of 8
+connection open: 63 of 9
+received message: asdf from 63
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 63
+push message: to 8
+connection close: 63 of 8
+connection open: 64 of 9
+received message: asf from 64
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 64
+push message: to 8
+received message: asf from 64
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 64
+push message: to 8
+connection open: 65 of 10
+connection close: 65 of 9
+connection open: 66 of 10
+received message: asdf from 66
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 64
+push message: to 66
+push message: to 8
+received message: aa from 66
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 64
+push message: to 66
+push message: to 8
+received message: ff from 66
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 64
+push message: to 66
+push message: to 8
+received message: aasdf from 66
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 64
+push message: to 66
+push message: to 8
+received message: asdfasdf from 66
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 64
+push message: to 66
+push message: to 8
+received message: adsfasdf from 66
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 64
+push message: to 66
+push message: to 8
+received message: asdf from 66
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 64
+push message: to 66
+push message: to 8
+received message: asdf from 66
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 64
+push message: to 66
+push message: to 8
+received message: asdf from 66
+push message: to 16
+push message: to 17
+push message: to 19
+push message: to 21
+push message: to 25
+push message: to 46
+push message: to 49
+push message: to 64
+push message: to 66
+push message: to 8
+connection close: 21 of 9
+connection close: 19 of 8
+connection close: 17 of 7
+connection close: 25 of 6
+connection close: 8 of 5
+connection close: 16 of 4
+connection close: 66 of 3
+connection open: 67 of 4
+connection close: 64 of 3
+connection close: 49 of 2
+connection open: 68 of 3
+connection close: 68 of 2
+connection open: 69 of 3
+connection close: 67 of 2
+connection close: 46 of 1
+connection close: 69 of 0
+connection open: 70 of 1
+connection close: 70 of 0
+connection open: 71 of 1
+connection open: 72 of 2
+connection open: 73 of 3
+connection close: 73 of 2
+connection open: 74 of 3
+connection close: 72 of 2
+connection close: 74 of 1
+connection open: 75 of 2
+received message: sh from 75
+push message: to 71
+push message: to 75
+received message: asdf from 75
+push message: to 71
+push message: to 75
+received message: asg from 75
+push message: to 71
+push message: to 75
+received message: asdf from 75
+push message: to 71
+push message: to 75
+received message: asdf from 75
+push message: to 71
+push message: to 75
+connection close: 75 of 1
+connection open: 76 of 2
+received message: asdf from 76
+push message: to 71
+push message: to 76
+received message: asdf from 76
+push message: to 71
+push message: to 76
+received message: asdf from 76
+push message: to 71
+push message: to 76
+connection close: 76 of 1
+connection open: 77 of 2
+received message: sdfg from 77
+push message: to 71
+push message: to 77
+connection close: 77 of 1
+connection open: 78 of 2
+received message: asdf from 78
+push message: to 71
+push message: to 78
+connection close: 78 of 1
+connection open: 79 of 2
+received message: asdf from 79
+push message: to 71
+push message: to 79
+[2020-03-13 00:07:37 *6132.0]	WARNING	swSSL_accept: bad SSL client[unknown:0], reason=156, error_string=error:0000009C:lib(0):func(0):reason(156)
+connection open: 81 of 3
+received message: Мелитополь from 81
+push message: to 71
+push message: to 79
+push message: to 81
+connection close: 79 of 2
+received message: палить from 81
+push message: to 71
+push message: to 81
+received message: мангал from 81
+push message: to 71
+push message: to 81
+connection close: 81 of 1
+connection close: 71 of 0
+connection open: 99 of 1
+connection close: 99 of 0
+connection open: 100 of 1
+connection close: 100 of 0
+connection open: 101 of 1
+connection close: 101 of 0
+connection open: 102 of 1
+connection close: 102 of 0
+connection open: 103 of 1
+connection close: 103 of 0
+connection open: 104 of 1
+connection close: 104 of 0
+connection open: 105 of 1
+connection close: 105 of 0
+connection open: 106 of 1
+connection close: 106 of 0
+connection open: 107 of 1
+connection close: 107 of 0
+connection open: 108 of 1
+connection close: 108 of 0
+connection open: 109 of 1
+connection close: 109 of 0
+connection open: 110 of 1
+connection close: 110 of 0
+connection open: 111 of 1
+connection close: 111 of 0
+connection open: 112 of 1
+connection close: 112 of 0
+connection open: 113 of 1
+connection close: 113 of 0
+connection open: 114 of 1
+connection close: 114 of 0
+connection open: 115 of 1
+connection close: 115 of 0
+connection open: 116 of 1
+connection close: 116 of 0
+connection open: 117 of 1
+connection close: 117 of 0
+connection open: 118 of 1
+connection close: 118 of 0
+connection open: 119 of 1
+connection close: 119 of 0
+connection open: 120 of 1
+connection close: 120 of 0
+connection open: 121 of 1
+connection close: 121 of 0
+connection open: 122 of 1
+connection open: 123 of 2
+connection close: 122 of 1
+connection open: 124 of 2
+connection close: 123 of 1
+connection close: 124 of 0
+connection open: 125 of 1
+connection close: 125 of 0
+connection open: 126 of 1
+connection close: 126 of 0
+connection open: 127 of 1
+connection close: 127 of 0
+connection open: 128 of 1
+connection close: 128 of 0
+connection open: 129 of 1
+connection close: 129 of 0
+connection open: 130 of 1
+connection close: 130 of 0
+connection open: 131 of 1
+connection close: 131 of 0
+connection open: 132 of 1
+connection close: 132 of 0
+connection open: 133 of 1
+connection close: 133 of 0
+connection open: 134 of 1
+connection close: 134 of 0
+connection open: 135 of 1
+connection close: 135 of 0
+connection open: 136 of 1
+connection close: 137 of 1
+connection close: 136 of 0
+connection open: 138 of 1
+connection close: 138 of 0
+connection open: 139 of 1
+connection close: 139 of 0
+connection open: 140 of 1
+connection close: 140 of 0
+connection close: 141 of 0
+connection open: 142 of 1
+connection close: 142 of 0
+connection open: 143 of 1
+connection close: 144 of 1
+connection close: 143 of 0
+connection open: 145 of 1
+connection close: 145 of 0
+connection open: 146 of 1
+connection close: 146 of 0
+connection open: 147 of 1
+connection close: 147 of 0
+connection open: 148 of 1
+connection close: 148 of 0
+connection open: 149 of 1
+connection close: 149 of 0
+connection open: 150 of 1
+connection close: 150 of 0
+connection open: 151 of 1
+connection close: 152 of 1
+connection close: 151 of 0
+connection open: 153 of 1
+connection close: 153 of 0
+connection open: 154 of 1
+connection close: 154 of 0
+connection open: 155 of 1
+received message: фыва from 155
+push message: to 155
+connection open: 156 of 2
+received message: фывап from 155
+push message: to 155
+push message: to 156
+received message: что то теряется from 155
+push message: to 155
+push message: to 156
+connection close: 155 of 1
+connection close: 156 of 0
+connection open: 157 of 1
+connection close: 157 of 0
+connection open: 158 of 1
+connection open: 159 of 2
+received message: sfg from 158
+push message: to 158
+push message: to 159
+connection close: 158 of 1
+received message: afg from 159
+push message: to 159
+connection open: 160 of 2
+connection close: 160 of 1
+connection open: 161 of 2
+connection close: 161 of 1
+connection open: 162 of 2
+connection close: 162 of 1
+connection open: 163 of 2
+connection close: 159 of 1
+connection close: 163 of 0
+connection open: 164 of 1
+connection close: 164 of 0
+connection open: 165 of 1
+connection open: 166 of 2
+received message: asdf from 165
+push message: to 165
+push message: to 166
+received message: asdf from 165
+push message: to 165
+push message: to 166
+received message: [object Object] from 165
+push message: to 165
+push message: to 166
+connection close: 166 of 1
+connection open: 167 of 2
+received message: [object Object] from 165
+push message: to 165
+push message: to 167
+received message: [object Object] from 165
+push message: to 165
+push message: to 167
+received message: [object Object] from 165
+push message: to 165
+push message: to 167
+received message: [object Object] from 165
+push message: to 165
+push message: to 167
+connection close: 165 of 1
+connection close: 167 of 0
+connection open: 168 of 1
+connection close: 168 of 0
+connection open: 169 of 1
+connection close: 169 of 0
+connection open: 170 of 1
+connection close: 170 of 0
+connection open: 171 of 1
+connection open: 172 of 2
+received message: asdg from 171
+push message: to 171
+push message: to 172
+connection close: 172 of 1
+connection close: 171 of 0
+connection open: 173 of 1
+received message: sdg from 173
+push message: to 173
+connection open: 174 of 2
+connection close: 173 of 1
+connection close: 174 of 0
+connection open: 175 of 1
+connection close: 175 of 0
+connection open: 176 of 1
+connection close: 176 of 0
+connection open: 177 of 1
+connection close: 177 of 0
+connection open: 178 of 1
+connection close: 178 of 0
+connection open: 179 of 1
+connection open: 180 of 2
+received message: asdf from 180
+push message: to 179
+push message: to 180
+connection close: 179 of 1
+connection open: 181 of 2
+received message: asdf from 181
+push message: to 180
+push message: to 181
+received message: asdf from 181
+push message: to 180
+push message: to 181
+connection close: 181 of 1
+connection open: 182 of 2
+received message: asdf from 182
+push message: to 180
+push message: to 182
+connection close: 182 of 1
+connection open: 183 of 2
+connection close: 183 of 1
+connection open: 184 of 2
+received message: asdf from 184
+push message: to 180
+push message: to 184
+received message: asdf from 184
+push message: to 180
+push message: to 184
+connection close: 184 of 1
+connection open: 185 of 2
+connection close: 180 of 1
+connection close: 185 of 0
+connection open: 186 of 1
+connection close: 186 of 0
+connection open: 187 of 1
+connection close: 187 of 0
+connection open: 188 of 1
+connection close: 188 of 0
+connection open: 189 of 1
+connection close: 189 of 0
+[2020-03-14 18:16:28 *6132.0]	WARNING	swSSL_accept: bad SSL client[unknown:0], reason=267, error_string=error:0000010B:lib(0):func(0):reason(267)
+[2020-03-14 21:20:19 *6132.0]	WARNING	swSSL_accept: bad SSL client[unknown:0], reason=267, error_string=error:0000010B:lib(0):func(0):reason(267)
+[2020-03-14 21:20:19 *6132.0]	WARNING	swSSL_accept: bad SSL client[unknown:0], reason=267, error_string=error:0000010B:lib(0):func(0):reason(267)
+[2020-03-15 08:40:35 *6132.0]	WARNING	swSSL_accept: bad SSL client[unknown:0], reason=267, error_string=error:0000010B:lib(0):func(0):reason(267)
+connection open: 195 of 1
+connection open: 196 of 2
+connection close: 196 of 1
+connection close: 195 of 0
+connection open: 197 of 1
+received message:  from 197
+push message: to 197
+received message: asdf from 197
+push message: to 197
+connection close: 197 of 0
+connection open: 198 of 1
+connection close: 198 of 0
+connection open: 199 of 1
+connection close: 199 of 0
+connection open: 200 of 1
+connection close: 200 of 0
+connection open: 201 of 1
+connection close: 201 of 0
+connection open: 202 of 1
+connection close: 202 of 0
+connection open: 203 of 1
+connection close: 203 of 0
+connection open: 204 of 1
+connection close: 204 of 0
+connection open: 205 of 1
+connection close: 205 of 0
+connection open: 206 of 1
+connection close: 206 of 0
+connection open: 207 of 1
+received message: rtyer from 207
+push message: to 207
+connection open: 208 of 2
+received message: wertwert from 208
+push message: to 207
+push message: to 208
+received message: wertwert from 207
+push message: to 207
+push message: to 208
+received message: fgsdfgs from 207
+push message: to 207
+push message: to 208
+connection close: 208 of 1
+connection close: 207 of 0
+connection open: 209 of 1
+connection close: 209 of 0
+connection open: 210 of 1
+connection close: 210 of 0
+connection open: 211 of 1
+connection close: 211 of 0
+connection open: 212 of 1
+connection close: 212 of 0
+connection open: 213 of 1
+connection close: 213 of 0
+connection open: 214 of 1
+connection close: 214 of 0
+connection open: 215 of 1
+connection open: 216 of 2
+connection close: 216 of 1
+connection open: 217 of 2
+received message: nggghn from 217
+push message: to 215
+push message: to 217
+received message: ghjfghj from 217
+push message: to 215
+push message: to 217
+connection close: 217 of 1

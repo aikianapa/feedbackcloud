@@ -14,11 +14,12 @@
   background-image: url(../img/preloader_big.gif);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: contain;
+  /*background-size: contain;*/
+  background-size: 50%;
 }
 
 @media (min-width: 767px) {
    #loader {
-      background-size: auto;
+      background-size: 30%;
    }
 }
