@@ -4,4 +4,6 @@ AddDefaultCharset UTF-8
 RewriteBase /
 RewriteEngine On
 
+RewriteRule ^app$ /app/ [L,QSA]
+
 RewriteRule ^(.*)$ index.php [L,QSA]
