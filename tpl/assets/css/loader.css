@@ -1,0 +1,24 @@
+#loader {
+  position:fixed;
+  width:100vw;
+  height: 100vh;
+  top:0;
+  left:0;
+  margin:0;
+  padding:0;
+  background-color: #ffffff;
+  transition-delay: 0.3s;
+  transition-duration: 0.3s;
+  z-index:99999;
+  overflow: hidden;
+  background-image: url(../img/preloader_big.gif);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+@media (min-width: 767px) {
+   #loader {
+      background-size: auto;
+   }
+}
