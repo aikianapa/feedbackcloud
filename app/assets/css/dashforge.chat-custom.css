@@ -887,34 +887,35 @@ img {
     display: none;
   }
 }
-@media (max-width: 992px) {
-  .header-place-title.user-chat{
-    margin-left: 0px;
-    width: 100vw;
-    padding: 0 15px 0 8px;
-  }
+/*Расширил зону действия мобильной таблицы*/
+@media (max-width: 1260px) {
   .table-dataresponsive-md tr,
   .table-dataresponsive-md td,
   .table-dataresponsive-md tbody {
     display: block;
     width: auto !important;
   }
-  .table-dataresponsive-md td.th-place-title:before{
+
+  .table-dataresponsive-md td.th-place-title:before {
     content: 'Место';
   }
-  .table-dataresponsive-md td.th-param-title:before{
+
+  .table-dataresponsive-md td.th-param-title:before {
     content: 'параметр';
   }
-  .table-dataresponsive-md td.th-daily-title:before{
+
+  .table-dataresponsive-md td.th-daily-title:before {
     content: 'день	';
   }
 
-  .table-dataresponsive-md td.th-weekly-title:before{
+  .table-dataresponsive-md td.th-weekly-title:before {
     content: 'неделя	';
   }
-  .table-dataresponsive-md td.th-month-title:before{
+
+  .table-dataresponsive-md td.th-month-title:before {
     content: 'месяц';
   }
+
   .table-dataresponsive-md td:before {
     display: block;
     margin-right: 8px;
@@ -923,16 +924,26 @@ img {
     float: left;
     font-weight: 700;
   }
+
   .table-dataresponsive-md tr {
     text-align: right;
   }
+
   .table-dataresponsive-md tr td.buy {
     text-align: center;
   }
+
   .table-dataresponsive-md thead,
   .table-dataresponsive-md th,
   .vps-table tr:first-child td:after {
     display: none;
+  }
+}
+@media (max-width: 992px) {
+  .header-place-title.user-chat{
+    margin-left: 0px;
+    width: 100vw;
+    padding: 0 15px 0 8px;
   }
   .show-sidebar-right .chat-sidebar-right{
     z-index: 1001;
@@ -1524,12 +1535,21 @@ footer.version .spinner-border{
 .iti--separate-dial-code input[type=text]{
   padding-left: 52px !important;
 }
-  @media screen and (max-width: 992px) {
-    .tr-pie-chart .pie-chart .chart {
-      /*position: absolute;*/
-      /*left: 0;*/
-      transform: scale(1.5) translate(35%, 35%);
-    }
+@media screen and (max-width: 480px) {
+  .tr-pie-chart .pie-chart .chart {
+    /*position: absolute;*/
+    /*left: 0;*/
+    transform: scale(1.5) translate(50%, 35%);
+  }
+  .pie-chart {
+    height: 400px;
+  }
+  .tr-pie-chart .ngx-charts {
+    position: relative;
+    top: 50px;
+  }
+}
+  @media screen and (min-width: 481px) and (max-width: 992px) {
     .pie-chart {
       height: 300px;
     }
@@ -1543,7 +1563,7 @@ footer.version .spinner-border{
     /*  height: 1px;*/
     /*  margin: 0 auto;*/
       position: relative;
-      top: 50px;
+      top: -20px;
     }
   }
   /*@media screen and (max-width: 767px) {*/

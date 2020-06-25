@@ -416,12 +416,12 @@ footer{
 .register-pwd-input:disabled{
   cursor: not-allowed;
 }
-@media screen and (max-width: 1700px) {
-  .screen_height{
-    margin: 40px 0;
-    min-height: 100% !important;
-  }
-}
+/*@media screen and (max-width: 1700px) {*/
+/*  .screen_height{*/
+/*    margin: 40px 0;*/
+/*    min-height: 100% !important;*/
+/*  }*/
+/*}*/
 .iti__selected-flag,
 .iti__selected-flag:hover,
 .iti__selected-flag:focus,
