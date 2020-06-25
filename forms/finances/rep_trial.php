@@ -14,8 +14,8 @@
         "table" : "users",
         "sort"  : "_created",
         "filter": {"role":"chatown","active":"on", "$or" : [
-            {"last_pay" : {"$exists" : false}},
-            {"last_pay" : ""}
+            {"payments" : {"$exists" : false}},
+            {"payments" : ""}
         ]},
         "html"  : "#financesList"
       }'>

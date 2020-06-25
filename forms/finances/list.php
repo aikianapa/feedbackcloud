@@ -29,8 +29,10 @@
             <span class="nav-link">
             <a href="#" data-ajax="{'url':'/ajax/form/finances/list/','size':'15','filter':{ 'company': '{{_id}}' },'bind':'cms.list.finances','target':'#financesList','render':'client'}">
               {{name}}
+              [[#if inn]]
               <br>
               <small>{{inn}}</small>
+              [[/if]]
             </a>
             <a href="#" data-ajax="{'url':'/cms/ajax/form/users/edit/{{_id}}','html':'.financesedit-modal'}"
             class="pos-absolute r-10"><i class="ri-file-edit-line"></i></a>
@@ -88,6 +90,10 @@
               </a>
               <span class="d-block tx-11 text-muted">
                     {{company}}
+                    [[#if inn]]
+                    ИНН: {{inn}}
+                    [[/if]]
+
               </span>
             </div>
 

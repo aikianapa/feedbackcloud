@@ -15,16 +15,17 @@
               <div class="col-sm-9">
 
                 <button class="form-control tx-left dropdown-toggle" type="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                  aria-haspopup="true" aria-expanded="false" wb-if='"{{company}}" > "" ==> disabled'>
+                  <span wb-if='"{{company}}" == ""'>Выберите плательщика...</span>
                   <wb-data wb="{'table':'users','item':'{{company}}'}">
-                  {{first_name}}
+                  {{name}} <span wb-if='"{{inn}}" > ""'>ИНН: {{inn}}</span>
                   </wb-data>
                 </button>
                 <div class="dropdown-menu">
 
                   <div class="search-form">
                     <input type="hidden" name="company" />
-                    <input type="search" class="form-control" placeholder="Плательщик" data-ajax="{'target':'#{{_form}}ModalEditOwners','filter_add':{'$or':[{ 'first_name' : {'$like' : '$value'} }, { 'name': {'$like' : '$value'} } ]} }"
+                    <input type="search" class="form-control" placeholder="Плательщик" data-ajax="{'target':'#{{_form}}ModalEditOwners','filter_add':{'$or':[{ 'first_name' : {'$like' : '$value'} }, { 'name': {'$like' : '$value'} }, { 'inn': {'$like' : '$value'} } ]} }"
                     />
                     <button class="btn" type="button"><i class="ri-search-line"></i></button>
                   </div>
@@ -32,7 +33,10 @@
                     <wb-foreach data-ajax="{'url':'/ajax/form/users/list/','size':'15','filter':{'role': 'chatown','active':'on'},'bind':'cms.edit.finown','render':'client'}"
                       auto>
                       <div class="p-1 cursor-pointer" data-id="{{_id}}" onclick="setDropdown(this)">
-                        {{first_name}}
+                        {{name}}
+                        [[#if inn]]
+                        <small>ИНН: {{inn}}</small>
+                        [[/if]]
                       </div>
                     </wb-foreach>
                   </div>
@@ -52,8 +56,8 @@
           <div class="form-group row">
             <label class="col-sm-3 form-control-label">Тариф</label>
             <div class="col-sm-5">
-              <select class="form-control" name="tarif" wb-tree="{'table':'catalogs','item':'tarifs','field':'tree'}" onChange="setPrice(this)">
-                <option value="{{data.id}}" data-month="{{data.month}}" data-price="{{data.price}}">
+              <select class="form-control" name="tarif" wb-tree="{'table':'catalogs','item':'tarifs','field':'tree'}" onChange="setPrice(this)" placeholder="Выберите тариф...">
+                <option value="{{id}}" data-month="{{data.month}}" data-price="{{data.price}}">
                   {{name}}
                 </option>
               </select>
@@ -62,11 +66,20 @@
 
           <div class="form-group row">
             <label class="col-sm-3 form-control-label">Сумма</label>
-            <div class="col-sm-5">
-              <input type="number" class="form-control" name="sum" placeholder="Сумма" readonly>
+            <div class="input-group col-sm-5">
+              <input type="number" class="form-control text-right" name="sum" placeholder="Сумма">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fa fa-rub"></i></span>
+              </div>
+            </div>
+
+            <div class="input-group col-sm-4">
+              <input type="text" name="month" class="form-control text-right" placeholder="Тариф" readonly>
+              <div class="input-group-append">
+                <span class="input-group-text">месяц(ев)</span>
+              </div>
             </div>
           </div>
-
 
           <div class="form-group row">
             <label class="col-sm-3 form-control-label">Наименование платежа</label>
@@ -79,8 +92,7 @@
 
       </div>
       <div class="modal-footer pd-x-20 pd-b-20 pd-t-0 bd-t-0">
-        <button type="button" class="btn btn-secondary tx-13" data-dismiss="modal">Закрыть</button>
-        <button type="button" class="btn btn-primary tx-13" wb-save="{'table':'{{_form}}','id':'{{_id}}','form':'#{{_form}}EditForm','update':'cms.list.{{_form}}' }">Сохранить</button>
+        <wb-include wb="{'form':'common_formsave.php'}" />
       </div>
     </div>
   </div>
@@ -95,9 +107,16 @@ var setDropdown = function(ev) {
 var setPrice = function(ev) {
     let $opt = $(ev).find("option:selected",0);
     let $form = $(ev).parents("form");
-    console.log($opt)
     $form.find("input[name=sum]").val($opt.attr('data-price'));
+    $form.find("input[name=month]").val($opt.attr('data-month'));
 }
+
+$("#{{_form}}ModalEdit").off("wb-save-done");
+$("#{{_form}}ModalEdit").on("wb-save-done",function(ev,result){
+  if (result.data.company !== undefined && result.data.company > "") {
+      $("#{{_form}}ModalEdit button.dropdown-toggle").prop("disabled",true);
+  }
+})
 </script>
 
 </html>

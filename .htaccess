@@ -18,15 +18,9 @@ Redirect 301 /home /
 RewriteCond %{HTTP_HOST} ^www\.(.*)$
 RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
 
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://feedbackcloud.ru/$1 [R,L]
+RewriteRule ^database(.*)$ index.php [R=404,L]
+RewriteRule ^tpl(.*)$ index.php [R=404,L]
 
-RewriteRule /fortests\/angular\/(.*)$ /fortests/angular/index.html#/$1 [R=301,L]
-
-RewriteRule ^database(.*)$ index.php [L,QSA]
-
-
-RewriteRule ^(.*)\.less$ /module/less/$1\.css [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
