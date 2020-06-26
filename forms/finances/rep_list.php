@@ -17,7 +17,7 @@
             </a>
           </span>
           <span class="nav-item">
-          <a class="nav-link" href="#" data-ajax="{'url':'/ajax/form/finances/list/','size':'15','filter':{ 'company': '{{_id}}' },'bind':'cms.list.finances','target':'#{{_form}}List','render':'client'}">
+          <a class="nav-link" href="#" data-ajax="{'url':'/cms/ajax/form/finances/rep_tarif/','html':'#{{_form}}List'}">
             Компании на подписке
           </a>
         </span>
