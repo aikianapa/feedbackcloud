@@ -8,22 +8,22 @@
 
 
         <div class="d-flex align-items-center justify-content-between pd-x-10 mg-b-10">
-          <span class="tx-10 tx-uppercase tx-medium tx-color-03 tx-sans tx-spacing-1"><i class="ri-coin-line tx-14"></i> Отчёты</span>
+          <span class="tx-10 tx-uppercase tx-medium tx-color-03 tx-sans tx-spacing-1"><i class="ri-coin-line tx-14"></i> Отчёты по финансам</span>
         </div>
         <nav id="{{_form}}ListOwners" class="nav flex-column mg-b-20">
             <span class="nav-item active">
-            <a class="nav-link" href="#" data-ajax="{'url':'/cms/ajax/form/finances/rep_trial/','html':'#{{_form}}List'}" auto>
+            <a class="nav-link" href="#" data-ajax="{'url':'/cms/ajax/form/finances/rep_fin_trial/','html':'#{{_form}}List'}" auto>
               Компании на демо периоде
             </a>
           </span>
           <span class="nav-item">
-          <a class="nav-link" href="#" data-ajax="{'url':'/cms/ajax/form/finances/rep_tarif/','html':'#{{_form}}List'}">
+          <a class="nav-link" href="#" data-ajax="{'url':'/cms/ajax/form/finances/rep_fin_tarif/','html':'#{{_form}}List'}">
             Компании на подписке
           </a>
         </span>
         <span class="nav-item">
-        <a class="nav-link" href="#" data-ajax="{'url':'/ajax/form/finances/list/','size':'15','filter':{ 'company': '{{_id}}' },'bind':'cms.list.finances','target':'#{{_form}}List','render':'client'}">
-          Истекающие в течении недели
+        <a class="nav-link" href="#" data-ajax="{'url':'/cms/ajax/form/finances/rep_fin_expired/','html':'#{{_form}}List'}">
+            Истекающие в течении недели
         </a>
       </span>
 
