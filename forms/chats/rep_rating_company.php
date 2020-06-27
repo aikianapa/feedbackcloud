@@ -6,30 +6,28 @@
       <th>#</th>
       <th>Наименование</th>
       <th>Контакты</th>
-      <th>Срок до</th>
+      <th>Рейтинг<br>начальный</th>
+      <th>Рейтинг<br>конечный</th>
     </tr>
   </thead>
   <tbody>
     <wb-foreach wb='{
-        "table" : "chats",
-        "call": "_rep_rating_company",
-        "size": "10",
-        "return": "_id, _created",
-        "sort"  : "_created",
-        "____filter": {"role":"chatown","active":"on", "expired" : {"$gte":"{{date()}}"} },
+        "table" : "users",
+        "size": "50",
+        "sort"  : "rating_finish:d",
+        "filter": {"role":"chatown","active":"on" },
         "html"  : "#financesList"
       }'>
         <tr>
           <th scope="row">{{_ndx}}</th>
           <td>{{name}}<br><small>{{inn}}</small></td>
-          <td>{{phone}}<br>{{email}}
-
-{{_id}} {{_created}}
+          <td>{{phone}}<br wb-if='"{{email}}">""'>{{email}}
           </td>
-          <td>{{date("d.m.Y",strtotime({{expired}}))}}<br>
-            <small>осталось дней:
-               {{ intval((strtotime({{expired}}) -  time()) / (3600*24))  }}
-             </small>
+          <td class="text-center">
+            {{rating_start}}
+          </td>
+          <td class="text-center">
+            {{rating_finish}}
           </td>
         </tr>
     </wb-foreach>

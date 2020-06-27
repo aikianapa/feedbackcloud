@@ -19,7 +19,7 @@ class fetchApi {
               // вычисление рейтинга по пользователю
               $oid = $app->route->params->owner;
               $owner = $app->db->itemRead("users",$oid);
-              if (!$owner) $this->_error("Owner not found");
+              if (!$owner OR $owner["role"] !== "chatown") $this->_error("Owner not found");
               $chats = $app->db->itemList("chats",[
                   "filter" => [
                       "active" => "off",
@@ -29,14 +29,13 @@ class fetchApi {
               ]);
               $count = $chats["count"];
               $chats = $chats["list"];
-              $rFinish =  ceil(array_sum(array_column($chats, 'rating')) / $count);
               if (!$count) {
                 $owner["rating_start"] = $owner["rating_finish"] = 0;
               } else {
                 $owner["rating_start"] = ceil(array_sum(array_column($chats, 'initial_rating')) / $count);
                 $owner["rating_finish"] = ceil(array_sum(array_column($chats, 'rating')) / $count);
               }
-              $res = $app->db->itemSave("places",$owner);
+              $res = $app->db->itemSave("users",$owner);
               if ($res) {
                   $result = [
                       "manager_id" => $oid,
