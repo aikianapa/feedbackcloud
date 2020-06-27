@@ -18,15 +18,6 @@ class wbAjax
         die;
     }
 
-    public function api_auth() {
-        $app = $this->app;
-        $user = $app->vars("_post");
-        // сделать запрос на сервер для проверки юзера
-        $user["role"] = "chatown";
-        $_SESSION["user"] = $user;
-        echo json_encode(["redirect"=>"/cabinet"]);
-    }
-
     public function checkcode() {
       $res = false;
       $code1 = intval($_SESSION["smscode"]);
@@ -34,5 +25,11 @@ class wbAjax
       if ($code1 == $code2) $res = true;
       return json_encode(["result"=>$res]);
     }
+
+    public function fetch() {
+        include(__DIR__."/fetch.php");
+        $fetch = new fetchApi($this->app);
+    }
+
 }
 ?>

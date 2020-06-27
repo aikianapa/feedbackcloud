@@ -12,7 +12,7 @@
         </div>
         <nav id="{{_form}}ListOwners" class="nav flex-column mg-b-20">
             <span class="nav-item active">
-            <a class="nav-link" href="#" data-ajax="{'url':'/cms/ajax/form/finances/rep_fin_trial/','html':'#{{_form}}List'}" auto>
+            <a class="nav-link" href="#" data-ajax="{'url':'/cms/ajax/form/chats/rep_rating_company/','html':'#{{_form}}List'}" auto>
               Компании по рейтингу
             </a>
           </span>
