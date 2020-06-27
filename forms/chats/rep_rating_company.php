@@ -11,6 +11,7 @@
     </tr>
   </thead>
   <tbody>
+      <wb-var star='<i class="fa fa-star"></i>' />
     <wb-foreach wb='{
         "table" : "users",
         "size": "50",
@@ -23,11 +24,15 @@
           <td>{{name}}<br><small>{{inn}}</small></td>
           <td>{{phone}}<br wb-if='"{{email}}">""'>{{email}}
           </td>
-          <td class="text-center">
-            {{rating_start}}
+          <td class="text-center text-secondary">
+            {{str_repeat({{_var.star}},{{rating_start}})}}
           </td>
-          <td class="text-center">
-            {{rating_finish}}
+          <wb-var color="text-secondary" wb-if='"{{rating_start}}" == "{{rating_finish}}"' />
+          <wb-var color="text-danger" wb-if='"{{rating_start}}" > "{{rating_finish}}"' />
+          <wb-var color="text-success" wb-if='"{{rating_start}}" < "{{rating_finish}}"' />
+
+          <td class="text-center {{_var.color}}">
+            {{str_repeat({{_var.star}},{{rating_finish}})}}
           </td>
         </tr>
     </wb-foreach>
