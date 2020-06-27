@@ -30,9 +30,12 @@ class fetchApi {
               $count = $chats["count"];
               $chats = $chats["list"];
               $rFinish =  ceil(array_sum(array_column($chats, 'rating')) / $count);
-
-              $owner["rating_start"] = ceil(array_sum(array_column($chats, 'initial_rating')) / $count);
-              $owner["rating_finish"] = ceil(array_sum(array_column($chats, 'rating')) / $count);
+              if (!$count) {
+                $owner["rating_start"] = $owner["rating_finish"] = 0;
+              } else {
+                $owner["rating_start"] = ceil(array_sum(array_column($chats, 'initial_rating')) / $count);
+                $owner["rating_finish"] = ceil(array_sum(array_column($chats, 'rating')) / $count);
+              }
               $res = $app->db->itemSave("places",$owner);
               if ($res) {
                   $result = [
@@ -57,10 +60,12 @@ class fetchApi {
               ]);
               $count = $chats["count"];
               $chats = $chats["list"];
-              $rFinish =  ceil(array_sum(array_column($chats, 'rating')) / $count);
-
-              $place["rating_start"] = ceil(array_sum(array_column($chats, 'initial_rating')) / $count);
-              $place["rating_finish"] = ceil(array_sum(array_column($chats, 'rating')) / $count);
+              if (!$count) {
+                $place["rating_start"] = $owner["rating_finish"] = 0;
+              } else {
+                $place["rating_start"] = ceil(array_sum(array_column($chats, 'initial_rating')) / $count);
+                $place["rating_finish"] = ceil(array_sum(array_column($chats, 'rating')) / $count);
+              }
               $res = $app->db->itemSave("places",$place);
 
               if ($res) {
