@@ -55,9 +55,13 @@
             </div>
             <div id="{{_form}}EditFormTables" class="tab-pane fade" role="tabpanel">
               Столы
-              {{tables}}
               <wb-multiinput name="tables">
-                <div class="col-1"><input type="checkbox" name="active" class="form-control tx-12"/></div>
+                <div class="col-1">
+                  <div class="custom-control custom-switch pt-2">
+                      <input type="checkbox" class="custom-control-input" name="active" id="{{_form}}EditFormTables{{_idx}}" />
+                      <label class="custom-control-label" for="{{_form}}EditFormTables{{_idx}}">&nbsp;</label>
+                  </div>
+                </div>
                 <div class="col-2"><input type="number" name="table" class="form-control"/></div>
                 <div class="col"><input type="text" name="name" class="form-control"/></div>
               </wb-multiinput>

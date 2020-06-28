@@ -17,7 +17,7 @@
         <nav id="{{_form}}ListOwners" class="nav flex-column nav-chat mg-b-20">
           <wb-foreach data-ajax="{'url':'/ajax/form/users/list/','filter':{'role': 'chatown'},'bind':'cms.list.roles','render':'client'}">
             <span class="nav-link">
-            <a href="#" data-ajax="{'url':'/ajax/form/places/list/','size':'15','filter':{ 'managers.0.user': '{{_id}}' },'bind':'cms.list.places','target':'#{{_form}}List','render':'client'}">
+            <a href="#" data-ajax="{'url':'/ajax/form/places/list/','size':'15','filter':{ 'managers.0.user': '{{_id}}' },'bind':'cms.list.places','target':'#placesList','render':'client'}">
               {{name}}
             </a>
             <a href="#" data-ajax="{'url':'/cms/ajax/form/users/edit/{{_id}}','html':'.places-edit-modal'}"
