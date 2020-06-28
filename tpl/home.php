@@ -17,7 +17,7 @@
                     feedbackcloud<br>
                     <span class="font-15 weight-700">сервис обратной связи</span>
                 </p>
-                <img class="full-width" src="assets/img/online.svg">
+                <img class="full-width" data-src="assets/img/online.svg">
                 <p class="text-uppercase font-15 weight-700 text-center mt-3">
                     помогаем бизнесу стать лучше
                 </p>
@@ -31,7 +31,7 @@
                 <p class="text-center text-uppercase text-font-size mb-5">
                     Как это работает
                 </p>
-                <img class="full-width" src="assets/img/howitworks.svg">
+                <img class="full-width" data-src="assets/img/howitworks.svg">
             </div>
             <div class="row mt-5 no-gutters justify-content-between w-100">
                 <div class="col-8 col-md-4 d-flex mx-auto mx-md-0">
@@ -72,12 +72,12 @@
                     Возможности <br>
                     FEEDBACKCLOUD
                 </p>
-                <img class="ipad-img-smaller" src="assets/img/company.svg">
+                <img class="ipad-img-smaller" data-src="assets/img/company.svg">
             </div>
         </div>
         <div class="row width-60 padding-lr-60 mt-5">
             <div class="col-md-6 mb-5 custom-block-to-left first-block">
-                <img class="full-width new-landing-images-width" src="assets/img/instantly-feedback-image.svg">
+                <img class="full-width new-landing-images-width" data-src="assets/img/instantly-feedback-image.svg">
                 <p class="mb-0 text-uppercase font-15 weight-700 line-height-15">
                     Мгновенно получайте <br>обратную связь<br>
                 </p>
@@ -89,7 +89,7 @@
             </div>
 
             <div class="col-md-6 mb-5 custom-block-to-right">
-                <img class="full-width new-landing-images-width" src="assets/img/service-quality-image.svg">
+                <img class="full-width new-landing-images-width" data-src="assets/img/service-quality-image.svg">
                 <p class="mb-0 text-uppercase font-15 weight-700">
                     Управляйте качеством сервиса<br>
                 </p>
@@ -102,7 +102,7 @@
             </div>
 
             <div class="col-md-6 custom-block-to-left third-block mb-5 mb-md-0">
-                <img class="full-width new-landing-images-width" src="assets/img/loyalty-image.svg">
+                <img class="full-width new-landing-images-width" data-src="assets/img/loyalty-image.svg">
                 <p class="mb-0 text-uppercase font-15 weight-700">
                     повышайте лояльность<br>
                 </p>
@@ -116,7 +116,7 @@
             </div>
 
             <div class="col-md-6 custom-block-to-right fourth-block">
-                <img class="full-width new-landing-images-width" src="assets/img/business-upgrade-image.svg">
+                <img class="full-width new-landing-images-width" data-src="assets/img/business-upgrade-image.svg">
                 <p class="mb-0 text-uppercase font-15 weight-700">
                     улучшайте свой бизнес<br>
                 </p>
@@ -140,7 +140,7 @@
                     эффективность<br>
                     feedbackcloud<br>
                 </p>
-                <img class="full-width ungrig-image" src="assets/img/feedback-efficiency-big.svg">
+                <img class="full-width ungrig-image" data-src="assets/img/feedback-efficiency-big.svg">
             </div>
         </div>
         <div class="row width-60 padding-lr-60 mt-5">
@@ -188,7 +188,7 @@
                     feedbackcloud<br>
                     <span class="font-15 weight-700">вам будут доступны все возможности</span>
                 </p>
-                <img class="full-width padding-lr-60 font-montserrat" src="assets/img/ttry.svg">
+                <img class="full-width padding-lr-60 font-montserrat" data-src="assets/img/ttry.svg">
             </div>
             <div class="mx-auto my-75px">
                 <a class="button btn_blue scroll-button-top" href="#">
