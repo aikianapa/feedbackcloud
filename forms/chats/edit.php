@@ -20,15 +20,22 @@
             <div id="{{_form}}EditFormMain" class="tab-pane fade show active" role="tabpanel">
 
               <div class="form-group row">
-                <label class="col-sm-2 form-control-label">Наименование</label>
-                <div class="col-sm-10">
+                <label class="col-sm-3 form-control-label">Дата начала</label>
+                <div class="col-sm-9">
+                  <input type="text" name="show.date" class="form-control" placeholder="Дата начала" readonly>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="col-sm-3 form-control-label">Наименование</label>
+                <div class="col-sm-9">
                   <input type="text" name="show.place" class="form-control" placeholder="Наименование места" readonly>
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="col-sm-2 form-control-label">Адрес</label>
-                <div class="col-sm-10">
+                <label class="col-sm-3 form-control-label">Адрес</label>
+                <div class="col-sm-9">
                   <wb-data wb="table=places&item={{place}}">
                     <input type="text" class="form-control" name="address" placeholder="Адрес" readonly>
                   </wb-data>
