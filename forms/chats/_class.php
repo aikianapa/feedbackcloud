@@ -9,6 +9,10 @@ class chatsClass extends cmsFormsClass {
       return $list["list"];
   }
 
+  public function beforeItemEdit(&$item) {
+    $this->beforeItemShow($item);
+  }
+
   public function beforeItemShow(&$item) {
       $tem["_show"] = [];
       $item["show"]["countmsg"] = count($item["msg"]);

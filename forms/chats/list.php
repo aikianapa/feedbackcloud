@@ -63,13 +63,16 @@
 
 
     <div class="list-group m-2" id="{{_form}}List">
-      <wb-foreach data-ajax="{'url':'/ajax/form/chats/list/','size':'15','sort':'_created:d','bind':'cms.list.chats','render':'client'}">
+      <wb-foreach data-ajax="{'url':'/ajax/form/chats/list/','size':'12','sort':'_created:d','bind':'cms.list.chats','render':'client'}">
         <div class="list-group-item d-flex align-items-center">
             <div>
               <a href="javascript:" data-ajax="{'url':'/cms/ajax/form/chats/edit/{{_id}}','html':'.chats-edit-modal','modal':'#{{_form}}ModalEdit'}"
                 class="tx-13 tx-inverse mg-b-0">
                 <i class="ri-calendar-line"></i> {{show.date}}
                 <i class="ri-road-map-line"></i> {{show.place}}
+                {{#if contacts.0.first_name}}
+                    <i class="ri-user-line"></i> {{contacts.0.first_name}}
+                {{/if}}
                 <span class="d-inline tx-11 text-muted">
                   <nobr>сообщений: <i class="ri-question-answer-line"></i> {{show.countmsg}}</nobr>
                 </span>
