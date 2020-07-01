@@ -13,14 +13,15 @@
     <wb-foreach wb='{
         "table" : "users",
         "sort"  : "_created",
-        "filter": {"role":"chatown","active":"on", "expired" : {"$lte":"{{date("Y-m-d",strtotime("today +{{expired_alert}} days"))}}"} },
+        "filter": {"role":"chatown","active":"on", "expired" : {"$lte":"{{date("Y-m-d",strtotime("today +{{_sett.expired_alert}} days"))}}"} },
         "html"  : "#financesList"
       }'>
       <tr>
         <th scope="row">{{_ndx}}</th>
         <td>{{name}}<br><small>{{inn}}</small></td>
         <td>{{phone}}<br>{{email}}</td>
-        <td>{{date("d.m.Y",strtotime({{expired}}))}}<br>
+        <td>{{date("d.m.Y",strtotime({{expired}}))}}
+          <br>
           <small>осталось дней:
              {{ ceil((strtotime({{expired}}) -  time()) / (3600*24))  }}
            </small>
