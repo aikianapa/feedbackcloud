@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <!-- Required meta tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Title</title>
-    <wb-snippet name="wbapp" />
-    <wb-snippet name="bootstrap" />
-    <wb-snippet name="fontawesome4" />
-    <link href="/tpl/assets/css/loader.css" rel="stylesheet">
-
-</head>
+<wb-include wb-tpl="head.inc.php"/>
 
 <body>
     <div id="loader"></div>
@@ -364,24 +354,6 @@
                 <div class="clients-logo-container icon-container-gera">
                     <img data-src="/tpl/assets/img/lnew//gera.png">
                 </div>
-
-                <div class="clients-logo-hover-details d-none">
-                    <div class="row">
-                        <div class="col-3 d-flex align-items-center">
-                            <div class="mr-4">
-                                <img data-src="/tpl/assets/img/lnew/logo-blue.svg">
-                            </div>
-                            <div>
-                                <p class="weight-700">Lorem Ipsum</p>
-                                <span>dolor sit amet</span>
-                            </div>
-                        </div>
-                        <div class="col-9">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
@@ -507,32 +479,6 @@
 
         </div>
     </footer>
-    <script type="wbapp">
-
-            wbapp.loadStyles(["/tpl/assets/css/common.css"],'',function(){
-                $("#loader").hide('slow');    
-            });
-
-            
-            $("a.scroll-link").click(function() {
-                $("html, body").animate({
-                    scrollTop: $($(this).attr("href")).offset().top + "px"
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-                return false;
-            });
-
-            $('.lnew-menu-link').on('click', function(){
-                $('body').toggleClass('show');
-            });
-            $('.lnew-backdrop').on('click', function(){
-                $('body').toggleClass('show');
-            });
-
-    </script>
-
 </body>
 
 </html>
