@@ -478,6 +478,8 @@
 
         </div>
     </footer>
+
+<script type="application/ld+json">{"@context": "https://schema.org","@type": "LocalBusiness","priceRange": "RUB","image": "//feedbackcloud.ru/tpl/assets/img/icon-384x384.png","address": {"@type": "PostalAddress","addressLocality": "St.Petersburg","addressRegion": "SPB","postalCode":"111111","streetAddress": "P.O.Box 1"},"description": "Feedback Cloud - сервис обратной связи","name": "FeedbackCloud","telephone": "+781200000000","openingHours": "Mo,Tu,We,Th,Fr,Sat,Sun 08:00-20:00"}</script>
 </body>
 
 </html>
