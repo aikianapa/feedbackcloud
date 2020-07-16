@@ -4,9 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="canonical" href="https://feedbackcloud.ru/">
+    <link rel="preload" href="/tpl/assets/css/loader.css" as="style">
+    <link rel="preload" href="/tpl/assets/css/common.css" as="style">
     
-<!--    <link rel="shortcut icon" href="/tpl/assets/img/favicon.png">-->
-    <link rel="shortcut icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">
+    <link rel="preload" href="/engine/js/jquery.min.js" as="script">
+    <link rel="preload" href="/engine/js/jquery-migrate.min.js" as="script">
+    <link rel="preload" href="/engine/js/wbapp.js" as="script">
+    <link rel="preload" href="/tpl/assets/img/favicon.png" as="image">
+    <link rel="preload" href="/tpl/assets/img/icon-384x384.png" as="image">
+    
+        
+                
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="/tpl/assets/img/favicon.png">
+    <!--<link rel="shortcut icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">-->
     <link rel="alternate" href="http://feedbackcloud.ru/" hreflang="x-default">
 
     <!-- Twitter -->
