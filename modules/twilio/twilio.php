@@ -1,26 +1,28 @@
 <?php
-wbRouterAdd("/module/twilio/(:num).xml", '/module/twilio/xml/usdot:$1');
 require __DIR__ . '/vendor/autoload.php';
+
 use Twilio\Rest\Client;
 use Twilio\TwiML\VoiceResponse;
 
-function twilio_init(&$obj)
-{
-	if (isset($_ENV["route"]["params"][0])) {
-		$mode=$_ENV["route"]["params"][0];
-		$call="twilio_{$mode}";
-		if (is_callable($call)) {
-		    $out=@$call();
+
+class modTwilio {
+  function __construct($app) {
+	$this->app = $app;
+	$out = "";
+	if ($app->vars("_route.mode") > '') {
+		$mode = $app->vars("_route.mode");
+		if (method_exists($this,$mode)) {
+		    $out=@$this->$mode();
 		}
 	} else {
-		$out=false;
+				$out=false;
 	}
 	echo $out;
 	die;
 }
 
 
-function twilio_xml() {
+function xml() {
 	if ($mode!=="xml") header('Content-Type: application/json');
 	$url="{$_ENV['route']['hostp']}/ajax/signup_get_code/";
 	$code=wbAuthPostContents($url, array("usdot"=>$_ENV["route"]["usdot"]));
@@ -45,8 +47,9 @@ function twilio_xml() {
 	echo $xml;
 }
 
-function twilio_sms() {
-	$app = $_ENV["app"];
+function sms() {
+	$app = $this->app;
+	include($app->vars('_env.path_app').'/functions.php');
 	// Your Account SID and Auth Token from twilio.com/console
 	$account_sid = $app->vars("_sett.modules.twilio.id");
 	$auth_token = $app->vars("_sett.modules.twilio.token");
@@ -71,7 +74,7 @@ function twilio_sms() {
 }
 
 
-function twilio_say_code() {
+function say_code() {
 	if ($mode!=="xml") header('Content-Type: application/json');
 	if (!isset($_POST["usdot"])) return json_encode(false);
 	if ($_POST["usdot"] !== $_ENV["test_dot"]) {
@@ -152,5 +155,7 @@ function twilio_sender_callback() {
 function twilio_sender_logview() {
 	$file =  __DIR__ . "/sender.log";
 	echo file_get_contents($file);
+}
+
 }
 ?>

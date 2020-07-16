@@ -1,4 +1,5 @@
 <?php
+wbRouterAdd("/module/twilio/(:num).xml", '/module/twilio/xml/usdot:$1');
 
 function modLoginBeforeShow($dom) {
   $app = $dom->app;
