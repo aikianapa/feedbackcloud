@@ -1,21 +1,26 @@
 <head>
     <meta charset="UTF-8">
     <wb-var base="/tpl" />
+    <base href="/tpl/" />
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="canonical" href="https://feedbackcloud.ru/">
-    <link rel="preload" href="/tpl/assets/css/loader.css" as="style">
-    <link rel="preload" href="/tpl/assets/css/common.css" as="style">
+    <link href="/tpl/assets/css/loader.css" rel="stylesheet">
     
+
     <link rel="preload" href="/engine/js/jquery.min.js" as="script">
     <link rel="preload" href="/engine/js/jquery-migrate.min.js" as="script">
     <link rel="preload" href="/engine/js/wbapp.js" as="script">
+    
+    <link rel="preload" href="/tpl/assets/css/common.css" as="style">
+    
+    <link rel="preload" href="/tpl/assets/img/preloader_big.gif" as="image">
     <link rel="preload" href="/tpl/assets/img/favicon.png" as="image">
     <link rel="preload" href="/tpl/assets/img/icon-384x384.png" as="image">
     
-        
-                
+            
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="/tpl/assets/img/favicon.png">
     <!--<link rel="shortcut icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">-->
     <link rel="alternate" href="http://feedbackcloud.ru/" hreflang="x-default">
@@ -24,13 +29,13 @@
     <meta name="twitter:site" content="https://feedbackcloud.ru/">
     <meta name="twitter:creator" content="feedbackcloud.ru">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Feedbackcloud">
+    <meta name="twitter:title" content="{{header}}">
     <meta name="twitter:description" content="Feedbackcloud - Получайте обратную связь от клиентов online">
     <meta name="twitter:image" content="//feedbackcloud.ru/tpl/assets/img/icon-384x384.png">
 
     <!-- Facebook -->
     <meta property="og:url" content="https://feedbackcloud.ru/">
-    <meta property="og:title" content="Feedbackcloud">
+    <meta property="og:title" content="{{header}}">
     <meta property="og:description" content="Feedbackcloud - Получайте обратную связь от клиентов online">
     <meta property="og:image" content="//feedbackcloud.ru/tpl/assets/img/icon-384x384.png">
     <meta property="og:image:secure_url" content="//feedbackcloud.ru/tpl/assets/img/icon-384x384.png">
@@ -48,18 +53,20 @@
 
     <!-- Meta -->
     <meta name="description" content="Feedbackcloud - Получайте обратную связь от клиентов online">
-    <meta name="author" content="Feedbackcloud">
-    <meta property="og:site_name" content="Feedbackcloud">
+    <meta name="author" content="{{header}}">
+    <meta property="og:site_name" content="{{header}}">
     
     <title>{{header}}</title>
     <wb-snippet name="wbapp" />
     <wb-snippet name="bootstrap" />
     <wb-snippet name="fontawesome4" />
-    <link href="/tpl/assets/css/loader.css" rel="stylesheet">
+
     <script type="wbapp">
+        $(document).on('bootstrap-css',function(){
             wbapp.loadStyles(["/tpl/assets/css/common.css"],'',function(){
                 $("#loader").hide('slow');    
             });
+        });
         
             $("a.scroll-link").click(function() {
                 $("html, body").animate({

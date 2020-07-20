@@ -16,4 +16,11 @@ class usersClass extends cmsFormsClass
             $item["phone"] = wbPhoneFormat($item["phone"]);
         }
     }
+    
+    function beforeItemSave(&$item) {
+        if (isset($item['phone'])) {
+            $item['phone'] = preg_replace("/\D/", '', $item['phone']);
+        }
+    }
+
 }

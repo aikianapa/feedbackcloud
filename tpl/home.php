@@ -42,10 +42,10 @@
                     <a href="#clients" class="scroll-link">Клиенты</a>
                 </div>
                 <div class="header-buttons">
-                    <a href="" class="login-button">
+                    <a href="/signin" class="login-button">
                     Войти
                 </a>
-                    <a href="" class="button_dark_square">
+                    <a href="/signout" class="button_dark_square">
                     Регистрация
                 </a>
                 </div>
