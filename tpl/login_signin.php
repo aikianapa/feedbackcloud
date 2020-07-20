@@ -6,7 +6,7 @@
 <div id="loader"></div>
 <div class="nland-register-container d-flex">
     <div class="d-flex justify-content-center justify-content-lg-end w-100">
-        <form class="nland-register-form-container"  method="post" action="/signin">
+        <form class="nland-register-form-container" autocomplete="off">
             <input type="hidden" name="_loginby" value="phone">
             <a href='/' class="nland-register-logo">
                 <img src="{{_var.base}}/assets/img/lnew/logo-blue.svg">
@@ -22,7 +22,7 @@
             </div>
             <div>
                 <div class="login-button-width-container d-flex justify-content-center mt-5">
-                    <button type="button" onclick='login();' class="btnLogin button-blue-square">
+                    <button type="button" class="btnLogin button-blue-square">
                         Войти
                     </button>
                 </div>
@@ -39,8 +39,9 @@
         </div>
         
 </div>
-    <script>
+    <script type="wbapp">
         "use strict"
+        wbapp.loadScripts(['/tpl/assets/js/custom.js']);
         $(document).ready(function(){
             $('.lnew-menu-link').on('click', function(){
                 $(this).parent().toggleClass('show');
@@ -51,19 +52,6 @@
                 console.log($(this).parent().attr('class'));
             });
         });
-        var login = function() {
-            let $form = $('.nland-register-form-container');
-            let login = $form.find('[name=l]').val().replace(/\D+/g,"");
-            let pwd = $form.find('[name=p]').val();
-            let regex = /\D/i;
-        
-            wbapp.postSync('https://api.feedbackcloud.ru/auth/phone/',{login:login,password:pwd}).then(data => {
-                if (!data.error) {
-                    localStorage.setItem('user',data);
-                    document.location.href = '/app';
-                }
-            })
-        }
     </script>
 </body>
 </html>
