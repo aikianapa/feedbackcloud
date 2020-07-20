@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<wb-include wb-tpl="head.inc.php"/>
-
-<body>
-<div id="loader"></div>
 <div class="nland-register-container d-flex">
     <div class="d-flex justify-content-center justify-content-lg-end w-100">
         <form class="nland-register-form-container" autocomplete="off">
@@ -17,7 +11,10 @@
                 </div>
                 <div class="pwd-input-container">
                     <input type="password" placeholder="Пароль" aria-label="password" aria-label="phone" name="p">
-                    <a href="#">Забыли пароль?</a>
+                    <a href="/signin/recover">Забыли пароль?</a>
+                </div>
+                <div class="alert alert-danger d-none">
+                    Неверный логин или пароль!
                 </div>
             </div>
             <div>
@@ -39,20 +36,4 @@
         </div>
         
 </div>
-    <script type="wbapp">
-        "use strict"
-        wbapp.loadScripts(['/tpl/assets/js/custom.js']);
-        $(document).ready(function(){
-            $('.lnew-menu-link').on('click', function(){
-                $(this).parent().toggleClass('show');
-                console.log($(this).parent().attr('class'));
-            });
-            $('.lnew-backdrop').on('click', function(){
-                $(this).parent().toggleClass('show');
-                console.log($(this).parent().attr('class'));
-            });
-            $('form input[name=l]').focus();
-        });
-    </script>
-</body>
-</html>
+

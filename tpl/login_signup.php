@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<wb-include wb-tpl="head.inc.php" />
-
-<body>
-    <div id="loader"></div>
     <div class="nland-register-container d-flex">
         <div class="d-flex justify-content-center justify-content-lg-end w-100">
-            <form class="nland-register-form-container login">
+            <form class="nland-register-form-container login" autocomplete="off">
                 <div class="nland-register-logo">
                     <img src="https://feedbackcloud.ru/tpl/assets/img/lnew/logo-blue.svg" />
                 </div>
@@ -60,35 +54,3 @@
         </div>
 
     </div>
-    <script>
-        $(document).ready(function() {
-
-
-            $("a.scroll-link").click(function() {
-                $("html, body").animate({
-                    scrollTop: $($(this).attr("href")).offset().top + "px"
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-                return false;
-            });
-
-
-            $('.lnew-menu-link').on('click', function() {
-                $(this).parent().toggleClass('show');
-                console.log($(this).parent().attr('class'));
-            });
-            $('.lnew-backdrop').on('click', function() {
-                $(this).parent().toggleClass('show');
-                console.log($(this).parent().attr('class'));
-            });
-                        
-        });
-        
-
-
-    </script>
-</body>
-
-</html>

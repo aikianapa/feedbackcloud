@@ -1,5 +1,4 @@
 "use strict"
-$(document).ready(function() {
     $('body').on('click', '.scroll-button-top', function (e){
         e.preventDefault();
         $('html, body').animate({
@@ -11,7 +10,6 @@ $(document).ready(function() {
     $(".btnLogin").click(function(){
 		localStorage.setItem("login",null);
 		localStorage.setItem("password",null);
-		
 		var form = $(this).parents("form");
 		var login = $(form).find("[name=l]").val();
 		var password = $(form).find("[name=p]").val();
@@ -24,9 +22,13 @@ $(document).ready(function() {
 				document.location.href = "/app#cabinet";
 			} else {
 				$(form)[0].reset();
+                $(form).find('input[name=l]').focus();
+                $(form).find('.alert').removeClass('d-none');
+                setTimeout(function(){
+                    $(form).find('.alert').addClass('d-none');
+                },3000);
 			}
 		})
 		
 
 	});
-});
