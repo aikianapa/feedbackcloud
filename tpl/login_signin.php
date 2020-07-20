@@ -42,7 +42,7 @@
     <script type="wbapp">
         "use strict"
         wbapp.loadScripts(['/tpl/assets/js/custom.js']);
-        $(document).ready(function(){
+
             $('.lnew-menu-link').on('click', function(){
                 $(this).parent().toggleClass('show');
                 console.log($(this).parent().attr('class'));
@@ -51,7 +51,7 @@
                 $(this).parent().toggleClass('show');
                 console.log($(this).parent().attr('class'));
             });
-        });
+            $('body').trigger('click');
     </script>
 </body>
 </html>
