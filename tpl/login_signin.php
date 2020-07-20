@@ -40,6 +40,7 @@
         
 </div>
     <script>
+        "use strict"
         $(document).ready(function(){
             $('.lnew-menu-link').on('click', function(){
                 $(this).parent().toggleClass('show');
@@ -56,9 +57,9 @@
             let pwd = $form.find('[name=p]').val();
             let regex = /\D/i;
         
-            wbapp.postSync('https://api.feedbackcloud.ru/auth/phone/',{login:login,password:pwd},function(data){
-                if (!data.error || data.error !== true) {
-                    localStorage('user',data);
+            wbapp.postSync('https://api.feedbackcloud.ru/auth/phone/',{login:login,password:pwd}).then(data => {
+                if (!data.error) {
+                    localStorage.setItem('user',data);
                     document.location.href = '/app';
                 }
             })
