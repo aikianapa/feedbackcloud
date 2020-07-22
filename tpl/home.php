@@ -264,7 +264,7 @@
             <div class="row">
                 <div class="col-12 col-lg-5 pr-lg-0 text-lg-left mb-5 mb-lg-0">
                     <h3 class="section-title">
-                    Протестируйте<br>
+                    <nobr>Присоединяйтесь к</nobr><br>
                     FeedbackCloud
                 </h3>
                     <!--                <p class="fifth-block-section-title-desc">-->
@@ -274,7 +274,7 @@
                         <img class="high-res-img-pos" data-src="/tpl/assets/img/lnew/fifth-block-img-png.png">
                     </div>
                     <button class="button-blue-square">
-                        Попробовать бесплатно
+                        Подключиться
                     </button>
                 </div>
                 <div class="col-12 col-lg-7 pl-lg-0 mob-hide">
