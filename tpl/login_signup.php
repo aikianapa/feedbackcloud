@@ -6,10 +6,10 @@
                 </div>
                 <div class="nland-register-inputs-container">
                     <div>
-                        <input name="phone" placeholder="Телефон" type="phone" wb-mask='+7 (999) 999-99-99'>
+                        <input name="phone" placeholder="Телефон" type="phone" wb-mask='+7 (999) 999-99-99' required>
                     </div>
                     <div class="pwd-input-container">
-                        <input name="password" type="password" placeholder="Придумайте пароль" min="6">
+                        <input name="password" type="password" placeholder="Придумайте пароль" minlength="6" required>
                     </div>
                     <div class="">
                         <p class="nland-password-hint mb-2">
@@ -18,7 +18,7 @@
                         </p>
                     </div>
                     <div>
-                        <input type="password" placeholder="Подтвердите пароль" min="6">
+                        <input type="password" name="password_check" placeholder="Подтвердите пароль" minlength="6" required>
                     </div>
                     <div class="pwd-input-container">
                         <input type="text" placeholder="Введите промокод">
@@ -27,7 +27,7 @@
                         <label class="register-checkbox custom-checkbox" for="active">
 
                             <input type="hidden" formControlName="active" #active_chat>
-                            <input id="active" class="form-check-input" type="checkbox">
+                            <input id="active" name="active" class="form-check-input"  required type="checkbox">
                             <span>
                                 <div class="manual-font-gotham">
                                     Регистрируясь в сервисе, Вы<br class="desktop-hide"> подтверждаете своё <br class="mob-hide">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="register-button-width d-flex justify-content-center align-items-center mt-lg-5 flex-column mx-auto">
-                    <button class="button-blue-square">
+                    <button type="button" class="button-blue-square btnReg">
                         Зарегистрироваться
                     </button>
                     <div class="d-flex justify-content-center">

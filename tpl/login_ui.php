@@ -5,6 +5,7 @@
 <body>
     <div id="loader"></div>
     <wb-include wb="tpl=login_{{_route.mode}}.php" />
+    <div class="toasts" style='width:250px; top:0; right:0;position:absolute;padding:5px;'></div>
     <script type='wbapp'>
         wbapp.loadScripts(['/tpl/assets/js/custom.js']);
 
@@ -27,7 +28,6 @@
                 $(this).parent().toggleClass('show');
                 console.log($(this).parent().attr('class'));
             });
-                        
 
         $('form input:visible:first').focus();
 

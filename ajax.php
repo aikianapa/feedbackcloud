@@ -30,6 +30,16 @@ class wbAjax
         include(__DIR__."/fetch.php");
         $fetch = new fetchApi($this->app);
     }
+    
+    public function reguser() {
+        $app = $this->app;
+        $phone = $app->digitsOnly($app->vars('_post.phone'));
+        $res = $app->authGetContents("https://api.feedbackcloud.ru/query/users?phone={$phone}");
+        $res = json_ecode($res,true);
+        if (count($res)) return json_encode(['error'=>true,'msg'=>'user_exists']);
+        
+        
+    }
 
 }
 ?>

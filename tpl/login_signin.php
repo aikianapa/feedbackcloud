@@ -7,10 +7,10 @@
             </a>
             <div>
                 <div>
-                    <input type="phone" wb-mask='+7 (999) 999-99-99' placeholder="Телефон" aria-label="phone" name="l">
+                    <input type="phone" wb-mask='+7 (999) 999-99-99' placeholder="Телефон" aria-label="phone" name="l" required>
                 </div>
                 <div class="pwd-input-container">
-                    <input type="password" placeholder="Пароль" aria-label="password" aria-label="phone" name="p">
+                    <input type="password" placeholder="Пароль" aria-label="password" aria-label="phone" name="p" required>
                     <a href="/signin/recover">Забыли пароль?</a>
                 </div>
                 <div class="alert alert-danger d-none">

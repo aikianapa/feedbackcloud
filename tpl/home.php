@@ -77,7 +77,7 @@
                                 Попробовать бесплатно
                             </button>
                         </div>
-                        <div class="our-clients-mob-order m-width-500-pad">
+                        <!--div class="our-clients-mob-order m-width-500-pad">
                             <h2 class="first-block-h2 mb-lg-0 text-lg-left">
                                 Наши клиенты:
                             </h2>
@@ -92,7 +92,7 @@
                                     <img data-src="/tpl/assets/img/lnew/gera.png">
                                 </div>
                             </div>
-                        </div>
+                        </div-->
                     </div>
                 </div>
                 <div class="first-block-img-size-container col-12 col-lg-6 px-lg-0 mob-hide">
@@ -287,7 +287,7 @@
             <h3 class="section-title text-lg-left">
             Блог
         </h3>
-            <div class="row normal-res-blog-row ml-0">
+            <!--div class="row normal-res-blog-row ml-0">
                 <div class="col-6 col-md-6 col-lg-auto mb-4 mb-lg-0 pl-0 normal-blog-item-width">
                     <div class="blog-image-container">
                         <img data-src="/tpl/assets/img/lnew/blog_1.png">
@@ -333,7 +333,7 @@
                         <br> в две строки
                     </div>
                 </div>
-            </div>
+            </div-->
         </section>
 
         <section class="clients-block my-lg-5 pt-5 m-width-500-pad" id="clients">

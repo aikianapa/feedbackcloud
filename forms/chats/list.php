@@ -17,7 +17,7 @@
         <nav id="{{_form}}ListOwners" class="nav flex-column nav-chat mg-b-20">
           <wb-foreach data-ajax="{'url':'/ajax/form/users/list/','filter':{'role': 'chatown'},'bind':'cms.list.roles','render':'client'}">
             <span class="nav-link">
-            <a href="#" data-ajax="{'url':'/ajax/form/chats/list/','size':'15','filter':{ 'manager_id': '{{_id}}' },'bind':'cms.list.chats','target':'#chatsList','render':'client'}">
+            <a href="#" data-ajax="{'url':'/ajax/form/chats/list/','size':'10','filter':{ 'manager_id': '{{_id}}' },'bind':'cms.list.chats','target':'#chatsList','render':'client'}">
               {{name}}
             </a>
             <a href="#" data-ajax="{'url':'/cms/ajax/form/users/edit/{{_id}}','html':'.chats-edit-modal'}"
@@ -63,7 +63,7 @@
 
 
     <div class="list-group m-2" id="{{_form}}List">
-      <wb-foreach data-ajax="{'url':'/ajax/form/chats/list/','size':'12','sort':'_created:d','bind':'cms.list.chats','render':'client'}">
+      <wb-foreach data-ajax="{'url':'/ajax/form/chats/list/','size':'10','sort':'_created:d','bind':'cms.list.chats','render':'client'}">
         <div class="list-group-item d-flex align-items-center">
             <div>
               <a href="javascript:" data-ajax="{'url':'/cms/ajax/form/chats/edit/{{_id}}','html':'.chats-edit-modal','modal':'#{{_form}}ModalEdit'}"

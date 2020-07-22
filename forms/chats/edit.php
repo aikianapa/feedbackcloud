@@ -67,10 +67,10 @@
                           <i class="ri-user-line"></i> {{_var.user}}
                           <i class="ri-calendar-line"></i> {{date("d.m.Y H:i:s",strtotime({{date}}))}}
                         </small>
-                        <div wb-if='"{{reply}}" > ""'>
+                        <div wb-if='"{{reply}}" > ""' style="word-break: break-all;">
                             {{reply}}
                         </div>
-                        <div wb-if='"{{text}}" > ""'>
+                        <div wb-if='"{{text}}" > ""' style="word-break: break-all;">
                             {{text}}
                         </div>
                     </li>
