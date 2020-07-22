@@ -45,7 +45,7 @@
                     <a href="/signin" class="login-button">
                     Войти
                 </a>
-                    <a href="/signout" class="button_dark_square">
+                    <a href="/signup" class="button_dark_square">
                     Регистрация
                 </a>
                 </div>
@@ -73,7 +73,7 @@
                     <div>
                         <div class="first-block-input-container d-md-flex d-lg-flex">
                             <input class="gray-input" type="text" placeholder="Email:">
-                            <button class="button-blue-square">
+                            <button onclick="document.location.href = '/signup'" class="button-blue-square">
                                 Попробовать бесплатно
                             </button>
                         </div>
@@ -122,7 +122,7 @@
                     <div class="mob-second-block-img desktop-hide">
                         <img data-src="/tpl/assets/img/lnew/second-block-img-png.png">
                     </div>
-                    <button class="button-blue-square try-now-button-position-mt">
+                    <button  onclick="document.location.href = '/signup'" class="button-blue-square try-now-button-position-mt">
                         Подключиться
                     </button>
                 </div>
@@ -244,7 +244,7 @@
                         </li>
                     </ul>
                     <div class="d-flex justify-content-lg-start">
-                        <a href="#" class="d-flex align-items-center show-more-link">
+                        <a href="/signup" class="d-flex align-items-center show-more-link">
                             <span>Узнать больше</span>
                             <img class="pl-3" data-src="/tpl/assets/img/lnew/show-more-arrow-right.svg">
                         </a>
@@ -273,7 +273,7 @@
                     <div class="col-12 col-lg-7 pl-lg-0 fifth-block-img-png-mob desktop-hide">
                         <img class="high-res-img-pos" data-src="/tpl/assets/img/lnew/fifth-block-img-png.png">
                     </div>
-                    <button class="button-blue-square">
+                    <button onclick="document.location.href = '/signup'"  class="button-blue-square">
                         Попробовать бесплатно
                     </button>
                 </div>
@@ -372,7 +372,7 @@
                     <li>Персональный менеджер</li>
                 </ul>
                 <div class="feedback-tariff-button-container">
-                    <button class="button_blue-inverse_square">
+                    <button  onclick="document.location.href = '/signup'"  class="button_blue-inverse_square">
                         Подключиться
                     </button>
                 </div>
@@ -385,7 +385,7 @@
             <span>Помогаем бизнесу стать лучше</span>
             <div class="banner-block-input d-lg-flex mt-2 justify-content-center m-width-500-pad">
                 <input class="gray-input" type="text" placeholder="Email:">
-                <button class="button-green-square">
+                <button onclick="document.location.href = '/signup'"  class="button-green-square">
                     Попробовать бесплатно
                 </button>
             </div>
