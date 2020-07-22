@@ -123,7 +123,7 @@
                         <img data-src="/tpl/assets/img/lnew/second-block-img-png.png">
                     </div>
                     <button class="button-blue-square try-now-button-position-mt">
-                        Попробовать бесплатно
+                        Подключиться
                     </button>
                 </div>
                 <div class="second-block-first-col col-12 col-lg-8 px-lg-0 mob-hide">
@@ -264,7 +264,7 @@
             <div class="row">
                 <div class="col-12 col-lg-5 pr-lg-0 text-lg-left mb-5 mb-lg-0">
                     <h3 class="section-title">
-                    <nobr>Присоединяйтесь к</nobr><br>
+                    Протестируйте<br>
                     FeedbackCloud
                 </h3>
                     <!--                <p class="fifth-block-section-title-desc">-->
@@ -274,7 +274,7 @@
                         <img class="high-res-img-pos" data-src="/tpl/assets/img/lnew/fifth-block-img-png.png">
                     </div>
                     <button class="button-blue-square">
-                        Подключиться
+                        Попробовать бесплатно
                     </button>
                 </div>
                 <div class="col-12 col-lg-7 pl-lg-0 mob-hide">
