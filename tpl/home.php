@@ -242,7 +242,7 @@
                         <li>
                             Отслеживание статистики и NPS
                         </li>
-                    </ul>
+                    </ul>    
                     <div class="d-flex justify-content-lg-start">
                         <a href="/signup" class="d-flex align-items-center show-more-link">
                             <span>Узнать больше</span>
@@ -359,11 +359,12 @@
         <section class="tariff-block mt-lg-5 pt-5" id="tariff">
             <div class="form-container feedback-tariff-container text-white">
                 <h1 class="text-white text-uppercase text-center weight-700 mb-0 font-50">Тариф</h1>
-                <h1 class="feedback-tariff-price text-white text-uppercase text-center weight-700 font-50">3999 РУБ</h1>
+                <h1 class="feedback-tariff-price text-white text-uppercase text-center weight-700 font-50">2999 РУБ</h1>
                 <!--            <div class="feedback-tariff-lorem">Lorem</div>-->
                 <ul>
+                    <li>QR-код</li>
                     <li>Online чат( текст, фото )</li>
-                    <li>SMS-уведомление</li>
+                    <li>SMS/Email уведомление</li>
                     <li>Промо-коды, сертификаты,
                         <br> <span>подарки</span></li>
                     <li>Панель управления</li>
