@@ -1,4 +1,4 @@
-<form>
+<html>
     <div class="row form-group">
         <label class="col-sm-4 control-label">{{_LANG[twilio_id]}}</label>
         <div class="col-sm-8"><input type="text" name="id" class="form-control" placeholder="{{_LANG[twilio_id]}}"></div>
@@ -18,9 +18,8 @@
         <label class="col-sm-4 control-label">{{_LANG[twilio_number]}}</label>
         <div class="col-sm-8"><input type="text" name="number" class="form-control" placeholder="{{_LANG[twilio_number]}}"></div>
     </div>
-</form>
 
-<script type="text/locale">
+<wb-lang>
 [en]
 twilio_settings		= "Settings"
 twilio_id			= "Account ID"
@@ -37,4 +36,6 @@ twilio_service_sms	= "Сервис ID (sms)"
 twilio_number		= "Номер телефона"
 twilio_save			= "Сохранить"
 
-</script>
+</wb-lang>
+
+</html>
