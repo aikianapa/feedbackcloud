@@ -16,7 +16,7 @@ class ComposerStaticInit7a560c30a82c30b318d89db9cf9cf02f
     public static $prefixDirsPsr4 = array (
         'Twilio\\' => 
         array (
-            0 => __DIR__ . '/..' . '/twilio/sdk/Twilio',
+            0 => __DIR__ . '/..' . '/twilio/sdk/src/Twilio',
         ),
     );
 

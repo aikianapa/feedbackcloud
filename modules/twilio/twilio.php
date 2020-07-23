@@ -15,7 +15,7 @@ class modTwilio {
 		    $out=@$this->$mode();
 		}
 	} else {
-				$out=false;
+        $out=false;
 	}
 	echo $out;
 	die;
@@ -49,7 +49,7 @@ function xml() {
 
 function sms() {
 	$app = $this->app;
-	include($app->vars('_env.path_app').'/functions.php');
+	include_once($app->vars('_env.path_app').'/functions.php');
 	// Your Account SID and Auth Token from twilio.com/console
 	$account_sid = $app->vars("_sett.modules.twilio.id");
 	$auth_token = $app->vars("_sett.modules.twilio.token");
@@ -61,11 +61,11 @@ function sms() {
 	$code = genSmsCode();
 	$_SESSION["smscode"] = $code;
 	echo $code;
-	die;
+//	die;
 	$client = new Client($account_sid, $auth_token);
 	$client->messages->create(
 	    // Where to send a text message (your cell phone?)
-	    '+79214213973',
+	    '+79883471188',
 	    array(
 	        'from' => $twilio_number,
 	        'body' => 'Код регистрации: '.$code
