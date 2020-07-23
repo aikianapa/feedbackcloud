@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="yandex-verification" content="69e8c47b34d96b20" />
     
     <link rel="canonical" href="https://feedbackcloud.ru/">
     <link href="/tpl/assets/css/loader.css" rel="stylesheet">
