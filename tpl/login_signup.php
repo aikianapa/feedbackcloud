@@ -8,20 +8,28 @@
                     <div>
                         <input name="phone" placeholder="Телефон" type="phone" wb-mask='+7 (999) 999-99-99' required>
                     </div>
+                    <div>
+                        <input name="name" placeholder="Наименование компании" type="text" required>
+                    </div>
                     <div class="pwd-input-container">
                         <input name="password" type="password" placeholder="Придумайте пароль" minlength="6" required>
                     </div>
                     <div class="">
                         <p class="nland-password-hint mb-2">
-                            6+ символов, не менее одной цифры,
-                            <br> одной буквы, только латинские буквы
+                            Не менее 6 символов
                         </p>
                     </div>
                     <div>
                         <input type="password" name="password_check" placeholder="Подтвердите пароль" minlength="6" required>
                     </div>
+                    
                     <div class="pwd-input-container">
-                        <input type="text" placeholder="Введите промокод">
+                        <input type="text" name="smscode" placeholder="Введите код из СМС" required>
+                        <a href="javascript:void(0);" class="btnCode">Получить код</a>
+                        <a href="javascript:void(0);" class="btnCodeWait d-none">
+                            Ожидание повтора
+                            <div class="spinner-grow spinner-grow-sm" role="status">...</div>
+                        </a>
                     </div>
                     <div class="register-checkbox-container">
                         <label class="register-checkbox custom-checkbox" for="active">

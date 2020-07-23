@@ -7,7 +7,7 @@
     });
     
     
-    $(".btnLogin").click(function(){
+    $(".login .btnLogin").click(function(){
 		localStorage.setItem("login",null);
 		localStorage.setItem("password",null);
 		var form = $(this).parents("form");
@@ -47,10 +47,35 @@
 
 	});
 
-    $(".btnReg").click(function(){
+    $(".login .btnCode").click(function(){
+        let form = $(this).parents("form");
+        if ($(form).find("[name=phone]").val() > "") {
+            $(".btnCode").hide();
+            $(".btnCodeWait").removeClass("d-none");
+            $.post("/ajax/getcode/",$(form).serializeJson(),function(data){
+                if (data.error == false) {
+                    setTimeout(function(){
+                        $(".btnCode").show();
+                        $(".btnCodeWait").addClass("d-none");
+                    },30000);
+                }
+            });    
+        } else {
+            wbapp.toast(wbapp._settings.sysmsg.error,"Введите номер телефона",{target:'.toasts'});
+        }
+    });
+
+    $(".login [name=smscode]").on('change',function(){
+        $(".btnCode").show();
+        $(".btnCodeWait").addClass("d-none"); 
+    });
+
+    $(".login .btnReg").click(function(){
+        let that = this;
+        $(that).prop('disabled',true);
 		localStorage.setItem("login",null);
 		localStorage.setItem("password",null);
-		var form = $(this).parents("form");
+		let form = $(this).parents("form");
 
         $(form).off('wb-verify-false');
         $(form).on('wb-verify-false',function(e,el,err){
@@ -63,7 +88,19 @@
         
         if ($(form).verify()) {
             $.post("/ajax/reguser/",$(form).serializeJson(),function(data){
-                console.log(data);
+                if (data.error == true) {
+                    if (data.msg == "invalid_code") {
+                        wbapp.toast(wbapp._settings.sysmsg.error,"Не верный СМС код",{target:'.toasts'});
+                    }
+                    if (data.msg == "user_exists") {
+                        wbapp.toast(wbapp._settings.sysmsg.error,"Телефонный номер уже зарегистрирован в системе",{target:'.toasts'});
+                    }
+                } else {
+                    
+                }
+                $(that).prop('disabled',false);
             });
+        } else {
+            $(that).prop('disabled',false);
         }
 	});

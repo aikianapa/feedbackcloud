@@ -57,20 +57,24 @@ function sms() {
 	// $auth_token = $_ENV["TWILIO_AUTH_TOKEN"]
 	// A Twilio number you own with SMS capabilities
 	$twilio_number = $app->vars("_sett.modules.twilio.number");
-	$phone = "+".text2tel($app->vars("_post.phone"));
+	$phone = "+".text2tel($app->vars("_req.phone"));
 	$code = genSmsCode();
 	$_SESSION["smscode"] = $code;
-	echo $code;
-//	die;
-	$client = new Client($account_sid, $auth_token);
-	$client->messages->create(
-	    // Where to send a text message (your cell phone?)
-	    '+79883471188',
-	    array(
-	        'from' => $twilio_number,
-	        'body' => 'Код регистрации: '.$code
-	    )
-	);
+    return json_encode(['error'=>false, 'code'=>$code]);
+    try {
+        $client = new Client($account_sid, $auth_token);
+        $client->messages->create(
+            // Where to send a text message (your cell phone?)
+            '+79883471188',
+            array(
+                'from' => $twilio_number,
+                'body' => 'Код регистрации: '.$code
+            )
+        );
+        return json_encode(['error'=>false, 'code'=>$code]);
+    } catch (Exeption $err) {
+        return json_encode(['error'=>true, 'msg'=>'Twilio error: '.$err->getMessage()]);
+    }
 }
 
 

@@ -4,7 +4,7 @@ class usersClass extends cmsFormsClass
     public function beforeItemShow(&$item)
     {
         if (!isset($item["name"]) or $item["name"] == "") {
-            $item["name"] = $item["first_name"];
+            if (isset($item["first_name"])) $item["name"] = $item["first_name"];
         }
         $item["trial"] = "";
         if (!isset($item["payments"]) OR count($item["payments"]) == 0) {

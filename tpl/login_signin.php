@@ -1,6 +1,6 @@
 <div class="nland-register-container d-flex">
     <div class="d-flex justify-content-center justify-content-lg-end w-100">
-        <form class="nland-register-form-container" autocomplete="off">
+        <form class="nland-register-form-container login" autocomplete="off">
             <input type="hidden" name="_loginby" value="phone">
             <a href='/' class="nland-register-logo">
                 <img src="{{_var.base}}/assets/img/lnew/logo-blue.svg">
