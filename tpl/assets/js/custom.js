@@ -58,6 +58,9 @@
                         $(".btnCode").show();
                         $(".btnCodeWait").addClass("d-none");
                     },30000);
+                } else {
+                        $(".btnCode").show();
+                        $(".btnCodeWait").addClass("d-none");     
                 }
             });    
         } else {
