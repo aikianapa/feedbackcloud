@@ -50,12 +50,9 @@ function xml() {
 function sms() {
 	$app = $this->app;
 	include_once($app->vars('_env.path_app').'/functions.php');
-	// Your Account SID and Auth Token from twilio.com/console
+
 	$account_sid = $app->vars("_sett.modules.twilio.id");
 	$auth_token = $app->vars("_sett.modules.twilio.token");
-	// In production, these should be environment variables. E.g.:
-	// $auth_token = $_ENV["TWILIO_AUTH_TOKEN"]
-	// A Twilio number you own with SMS capabilities
 	$twilio_number = $app->vars("_sett.modules.twilio.number");
 	$phone = "+".text2tel($app->vars("_req.phone"));
 	$code = genSmsCode();
@@ -64,7 +61,6 @@ function sms() {
     try {
         $client = new Client($account_sid, $auth_token);
         $client->messages->create(
-            // Where to send a text message (your cell phone?)
             $phone,
             array(
                 'from' => $twilio_number,
