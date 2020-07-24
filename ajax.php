@@ -35,8 +35,10 @@ class wbAjax
     public function getcode() {
         $app = $this->app;
         $phone = $app->digitsOnly($app->vars('_post.phone'));
-        $res = $app->authPostContents($app->route->host."/module/twilio/sms?phone={$phone}");
+        $res = $app->authPostContents($app->route->host."/module/twilio/sms?phone=+{$phone}");
         return $res;
+        
+        
         $res = json_decode($res);
         return json_encode(['error'=>$res->error]);
     }
