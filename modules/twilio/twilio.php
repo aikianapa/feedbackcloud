@@ -60,7 +60,7 @@ function sms() {
 	$phone = "+".text2tel($app->vars("_req.phone"));
 	$code = genSmsCode();
 	$_SESSION["smscode"] = $code;
-    return json_encode(['error'=>false, 'code'=>$code]);
+
     try {
         $client = new Client($account_sid, $auth_token);
         $client->messages->create(
