@@ -43,6 +43,26 @@ class wbAjax
         return json_encode(['error'=>$res->error]);
     }
     
+    
+    public function validmail() {
+        $app = $this->app;
+        $uid = $app->vars("_req.user_id");
+        $email = $app->vars("_req.email");
+        $code = genSmsCode();
+        $msg = $app->getTpl("validmail.php");
+        $msg->fetch(['code'=>$code]);
+        $header = $msg->find("title")->text();
+        $user = $app->itemRead("users",$uid);
+$res = $app->mail(null,[$email,'test'],$header,$msg);
+return json_encode($res);
+        if (!$user OR $user["role"] !== 'chatown') {
+            return json_encode(['error'=>true,'msg'=>'user_invalid']);
+        } else {
+            $res = $app->mail(null,[$email,$user['name']],$header,$msg);
+            return json_encode($res);
+        }
+    }
+    
     public function reguser() {
         $app = $this->app;
         $phone = $app->digitsOnly($app->vars('_post.phone'));
