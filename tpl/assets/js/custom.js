@@ -130,8 +130,11 @@
                         wbapp.toast(wbapp._settings.sysmsg.error,"Неизвестная ошибка. Попробуйте позже",{target:'.toasts'});
                     }
                 } else {
-                    wbapp.toast(wbapp._settings.sysmsg.success,"Пароль удачно изменён",{target:'.toasts',delay:10000});
-                    document.location.href = '/signin';
+                    let delay = 10000;
+                    wbapp.toast(wbapp._settings.sysmsg.success,"Пароль удачно изменён",{target:'.toasts',delay:delay});
+                    setTimeout(function(){
+                        document.location.href = '/signin';
+                    },delay);
                 }
                 $(that).prop('disabled',false);
             });
