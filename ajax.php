@@ -53,8 +53,7 @@ class wbAjax
         $msg->fetch(['code'=>$code]);
         $header = $msg->find("title")->text();
         $user = $app->itemRead("users",$uid);
-$res = $app->mail(null,[$email,'test'],$header,$msg);
-return json_encode($res);
+        $res = $app->mail($app->vars('_sett.email'),$email,$header,$msg);
         if (!$user OR $user["role"] !== 'chatown') {
             return json_encode(['error'=>true,'msg'=>'user_invalid']);
         } else {
