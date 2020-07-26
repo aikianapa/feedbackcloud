@@ -54,6 +54,7 @@ class wbAjax
         }
         unset($_POST['smscode']);
         unset($_POST['password_check']);
+        unset($_SESSION['smscode']);
         $user = $app->vars('_post');
         $user['role'] = 'chatown';
         $user['password'] = $app->passwordMake($user['password']);
@@ -61,6 +62,27 @@ class wbAjax
         $app->itemSave('users',$user);
         return json_encode(['error'=>false]);
     }
+    
+    public function recover() {
+        $app = $this->app;
+        $phone = $app->digitsOnly($app->vars('_post.phone'));
+        $res = $app->authGetContents("https://api.feedbackcloud.ru/query/users?phone={$phone}&role=chatown&active=on");
+        $res = json_decode($res,true);
+print_r($res);
+        if (!count($res)) return json_encode(['error'=>true,'msg'=>'user_invalid']);
+        if ($app->vars('_post.smscode')  !==  $app->vars('_sess.smscode')) {
+            return json_encode(['error'=>true,'msg'=>'invalid_code']);
+        }
+        unset($_SESSION['smscode']);
+        $user = array_shift($res);
+        $user['password'] = $app->passwordMake($app->vars('_post.password'));
+        $res = $app->itemSave('users',$user);
+        if (!$res) {
+            return json_encode(['error'=>true,'msg'=>'unknown_error']);
+        }
+        return json_encode(['error'=>false]);
+    }
+
 
 }
 ?>

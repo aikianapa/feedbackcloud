@@ -94,8 +94,7 @@
                 if (data.error == true) {
                     if (data.msg == "invalid_code") {
                         wbapp.toast(wbapp._settings.sysmsg.error,"Не верный СМС код",{target:'.toasts'});
-                    }
-                    if (data.msg == "user_exists") {
+                    } else if (data.msg == "user_exists") {
                         wbapp.toast(wbapp._settings.sysmsg.error,"Телефонный номер уже зарегистрирован в системе",{target:'.toasts'});
                     }
                 } else {
@@ -107,3 +106,35 @@
             $(that).prop('disabled',false);
         }
 	});
+
+    $(".login .btnRecover").click(function(){
+        let that = this;
+        let form = $(this).parents("form");
+
+        $(form).off('wb-verify-false');
+        $(form).on('wb-verify-false',function(e,el,err){
+            if (err !== undefined) {
+                wbapp.toast(wbapp._settings.sysmsg.error,err,{target:'.toasts'});
+            }
+
+        });
+        
+        if ($(form).verify()) {
+            $.post("/ajax/recover/",$(form).serializeJson(),function(data){
+                if (data.error == true) {
+                    if (data.msg == "invalid_code") {
+                        wbapp.toast(wbapp._settings.sysmsg.error,"Не верный СМС код",{target:'.toasts'});
+                    } else if (data.msg == "user_invalid") {
+                        wbapp.toast(wbapp._settings.sysmsg.error,"Телефонный номер не зарегистрирован в системе",{target:'.toasts'});
+                    } else if (data.msg == "unknown_error") {
+                        wbapp.toast(wbapp._settings.sysmsg.error,"Неизвестная ошибка. Попробуйте позже",{target:'.toasts'});
+                    }
+                } else {
+                    wbapp.toast(wbapp._settings.sysmsg.success,"Пароль удачно изменён",{target:'.toasts'});
+                }
+                $(that).prop('disabled',false);
+            });
+        } else {
+            $(that).prop('disabled',false);
+        }
+    });
