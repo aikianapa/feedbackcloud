@@ -47,8 +47,8 @@ class wbAjax
     public function validmail() {
         $app = $this->app;
         
-        if ($app->vars("_req.code") > "" && isset($_SESSION['emailcode'])) {
-            if ($app->vars("_req.code") == $_SESSION['emailcode']) {
+        if ($app->vars("_req.code") > "") {
+            if (isset($_SESSION['emailcode']) AND $app->vars("_req.code") == $_SESSION['emailcode']) {
                 return json_encode(['error'=>false,'msg'=>'success']);
             } else {
                 return json_encode(['error'=>true,'msg'=>'error']);
