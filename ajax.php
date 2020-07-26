@@ -68,7 +68,6 @@ class wbAjax
         $phone = $app->digitsOnly($app->vars('_post.phone'));
         $res = $app->authGetContents("https://api.feedbackcloud.ru/query/users?phone={$phone}&role=chatown&active=on");
         $res = json_decode($res,true);
-print_r($res);
         if (!count($res)) return json_encode(['error'=>true,'msg'=>'user_invalid']);
         if ($app->vars('_post.smscode')  !==  $app->vars('_sess.smscode')) {
             return json_encode(['error'=>true,'msg'=>'invalid_code']);
