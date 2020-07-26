@@ -57,7 +57,6 @@ function sms() {
 	$phone = "+".text2tel($app->vars("_req.phone"));
 	$code = genSmsCode();
 	$_SESSION["smscode"] = $code;
-return json_encode(['error'=>false, 'code'=>$code]);
     try {
         $client = new Client($account_sid, $auth_token);
         $client->messages->create(
@@ -67,7 +66,8 @@ return json_encode(['error'=>false, 'code'=>$code]);
                 'body' => 'Код регистрации: '.$code
             )
         );
-        return json_encode(['error'=>false, 'code'=>$code]);
+        //return json_encode(['error'=>false, 'code'=>$code]);
+        return json_encode(['error'=>false]);
     } catch (Exeption $err) {
         return json_encode(['error'=>true, 'msg'=>'Twilio error: '.$err->getMessage()]);
     }
