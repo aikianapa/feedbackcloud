@@ -45,6 +45,13 @@ class wbAjax
     
     
     public function validmail() {
+        if ($app->vars("_req.code") > "") {
+            if ($app->vars("_req.code") == $_SESSION['emailcode']) {
+                return json_encode(['error'=>false,'msg'=>'success']);
+            } else {
+                return json_encode(['error'=>true,'msg'=>'error']);
+            }
+        }
         $app = $this->app;
         $uid = $app->vars("_req.user_id");
         $email = $app->vars("_req.email");
@@ -58,6 +65,7 @@ class wbAjax
             return json_encode(['error'=>true,'msg'=>'user_invalid']);
         } else {
             $res = $app->mail(null,[$email,$user['name']],$header,$msg);
+            $_SESSION['emailcode'] = $code;
             return json_encode($res);
         }
     }
