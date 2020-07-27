@@ -880,8 +880,8 @@ footer a:focus{
 }
 .lnew-footer{
     justify-content: space-between;
-    margin-left: 15px;
-    margin-right: 15px;
+    /*margin-left: 15px;*/
+    /*margin-right: 15px;*/
 }
 .footer-logo-container{
     align-items: flex-end;
@@ -1070,7 +1070,7 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
         /*max-width: 40px;*/
     }
     .nland-register-container{
-        height: 100%;
+        height: max-content;
         min-height: 100%;
     }
     .nland-register-form-container{
@@ -1379,10 +1379,11 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
     .nland-register-form-container{
         margin: 0 30px 50px 30px;
         height: 100%;
+        justify-content: flex-start;
     }
-    .nland-register-form-container.login{
-        margin-bottom: 0;
-    }
+    /*.nland-register-form-container.login{*/
+    /*    margin-bottom: 0;*/
+    /*}*/
     /*.nland-register-img-container, .nland-login-img-container{*/
     /*    display: none;*/
     /*}*/
@@ -1510,7 +1511,7 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
     }
     .header-content{
         margin-top: 40px;
-        padding: 0 20px;
+        /*padding: 0 20px;*/
     }
     .header-content a{
         display: block;
