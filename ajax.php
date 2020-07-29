@@ -48,7 +48,10 @@ class wbAjax
         $app = $this->app;
         
         if ($app->vars("_req.code") > "") {
-            if (isset($_SESSION['emailcode']) AND $app->vars("_req.code") == $_SESSION['emailcode']) {
+            if (isset($_SESSION['emailcode']) AND $app->vars("_req.code") == $_SESSION['emailcode']['code']) {
+				$user = $app->itemRead("users",$_SESSION['emailcode']['uid']);
+				$user['email'] = $_SESSION['emailcode']['email'];
+				$app->itemSave('users',$user);
                 return json_encode(['error'=>false,'msg'=>'success']);
             } else {
                 return json_encode(['error'=>true,'msg'=>'error']);
@@ -62,12 +65,21 @@ class wbAjax
         $msg->fetch(['code'=>$code]);
         $header = $msg->find("title")->text();
         $user = $app->itemRead("users",$uid);
-        $res = $app->mail($app->vars('_sett.email'),$email,$header,$msg);
         if (!$user OR $user["role"] !== 'chatown') {
             return json_encode(['error'=>true,'msg'=>'user_invalid']);
         } else {
-            $res = $app->mail(null,[$email,$user['name']],$header,$msg);
-            $_SESSION['emailcode'] = $code;
+            $res = $app->mail($app->vars('_sett.email'),$email,$header,$msg);
+            $_SESSION['emailcode'] = [
+				'code' => $code,
+				'email' => $email,
+				'uid' => $uid
+            ];
+            if ($res['error'] == false) {
+				$res['test'] = $_SESSION['emailcode'];	
+			} else {
+				return json_encode(['error'=>true,'msg'=>'unknown_error']);
+			}
+            
             return json_encode($res);
         }
     }
