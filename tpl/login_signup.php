@@ -40,7 +40,7 @@
                                 <div class="manual-font-gotham">
                                     Регистрируясь в сервисе, Вы<br class="desktop-hide"> подтверждаете своё <br class="mob-hide">
                                     согласие с<br class="desktop-hide"> условиями предоставления
-                                    <a href="#" class="nland-policy-link">сервиса</a>
+                                    <a href="/policy" class="nland-policy-link">сервиса</a>
                                 </div>
                              </span>
                         </label>
