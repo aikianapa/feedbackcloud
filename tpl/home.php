@@ -402,7 +402,7 @@
                 </div>
                 <div class="footer-copyright">
                     All copyrights reserved
-                    <br> to FeedbackCloud 2020
+                    <br> to FeedbackCloud {{date("Y")}}
                 </div>
             </div>
             <div class="col-12 col-lg-auto footer-links-block d-lg-flex justify-content-center text-center text-lg-left">
